@@ -5,6 +5,9 @@ import '@fontsource/barlow/latin-600.css';
 import '@fontsource/barlow/latin-700.css';
 import Arrow from '../components/Arrow.astro';
 
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const canonicalUrl = new URL(base, Astro.site);
+
 const priorities = [
   { title: 'Jail & public safety reform', id: 'public-safety' },
   { title: 'Election accessibility', id: 'elections' },
@@ -27,16 +30,16 @@ const reading = [
     <meta property="og:title" content="Julia Adele Callahan | Democrats on offense" />
     <meta property="og:description" content="For Bibb County Democratic Party Chair. Meet Julia, explore the playbook, and connect." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://joinjulia.com/" />
-    <link rel="canonical" href="https://joinjulia.com/" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preload" href="/fonts/julia-playbook.otf" as="font" type="font/otf" crossorigin />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="preload" href={`${base}fonts/julia-playbook.otf`} as="font" type="font/otf" crossorigin />
     <title>Julia Adele Callahan | Democrats on offense</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="wordmark" href="/" aria-label="Join Julia home">joinjulia.com</a>
+      <a class="wordmark" href={base} aria-label="Join Julia home">joinjulia.com</a>
       <nav aria-label="Main navigation"><a href="#my-story">My story</a><a href="#priorities">Priorities</a></nav>
     </header>
     <main id="main">
@@ -48,7 +51,7 @@ const reading = [
             <p class="candidate-office">For Bibb County Democratic Party Chair</p>
             <a class="primary-action" href="#priorities">Explore the priorities <Arrow /></a>
           </div>
-          <img class="play-diagram" src="/images/offensive-playbook.webp" width="1469" height="1071" alt="" fetchpriority="high" decoding="async" />
+          <img class="play-diagram" src={`${base}images/offensive-playbook.webp`} width="1469" height="1071" alt="" fetchpriority="high" decoding="async" />
         </div>
       </section>
       <section class="playbook section-shell" id="priorities" aria-labelledby="playbook-heading">
@@ -104,7 +107,7 @@ const reading = [
       </section>
     </main>
     <footer class="site-footer section-shell">
-      <div><a class="wordmark" href="/">joinjulia.com</a><p>Julia Adele Callahan<br />For Bibb County Democratic Party Chair<br />Macon, Georgia</p></div>
+      <div><a class="wordmark" href={base}>joinjulia.com</a><p>Julia Adele Callahan<br />For Bibb County Democratic Party Chair<br />Macon, Georgia</p></div>
       <nav aria-label="Social links"><a href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Facebook <Arrow /></a><a href="https://www.instagram.com/jaythaqueen/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://www.threads.com/@jaythaqueen" target="_blank" rel="noopener noreferrer">Threads <Arrow /></a></nav>
       <a class="back-top" href="#main">Back to the playbook <Arrow /></a>
     </footer>

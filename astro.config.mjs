@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://joinjulia.com',
+  site: process.env.SITE_URL || 'https://joinjulia.com',
+  base: process.env.BASE_PATH || '/',
   output: 'static',
   devToolbar: { enabled: false },
 });

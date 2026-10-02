@@ -20,7 +20,15 @@ npm run build
 npm run preview
 ```
 
-Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages with the `joinjulia.com` custom domain. Use `npm ci && npm run build` as the build command and `dist` as the output directory. The site currently assumes deployment at the domain root; a GitHub project subpath requires configuring Astro's `base` and adapting the root-relative public asset links.
+Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages. Use `npm ci && npm run build` as the build command and `dist` as the output directory. Local builds default to `https://joinjulia.com/`; `SITE_URL` and `BASE_PATH` can override the origin and deployment path.
+
+## GitHub Pages
+
+`.github/workflows/deploy.yml` deploys on pushes to `main` and can also be run manually from the Actions tab. It uses Node.js 24, installs the committed lockfile with `npm ci`, builds Astro, uploads only `dist/`, and deploys to the `github-pages` environment. Authentication uses the built-in GitHub token; no deployment secret is needed.
+
+In the repository's **Settings → Pages**, select **GitHub Actions** as the build source. The workflow reads the Pages URL and base path, so the default `https://kerryhatcher.github.io/joinjulia.com/` address and a configured custom domain both work, including fonts, images, home links, and canonical metadata.
+
+To use `joinjulia.com`, configure it under **Settings → Pages → Custom domain**, point its DNS at GitHub Pages, and enable HTTPS when available. Rerun the deployment after changing the domain so the build picks up the updated origin and path. GitHub Actions deployments use the repository's custom-domain setting; they do not require a `CNAME` file. See [GitHub's custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Content
 
