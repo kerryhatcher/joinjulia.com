@@ -1,0 +1,4 @@
+{
+  "prompt": "Use the supplied offensive football diagram as the exact reference. Recreate its clean flat graphic on genuinely transparent background at 1536x1120 resolution, landscape aspect 1.37:1. Preserve the layout: six lime outlined offense circles near the bottom, six lime defense crosses above them, five lime curved or straight advancing arrow routes, seven thin mid-blue vertical field lines with small sideline ticks. Flat crisp ink, lime #D9F267 and mid-blue #2467E5. Keep the proportions, quiet margins, route arrangement and line weights of the reference. No text, no shading, no texture, no gradients, no logos, no added elements. Remove only the royal blue background to transparent alpha so the field drawing can sit on the website's own blue surface. This is a separate production graphic asset, not a website screenshot. Keep every circle, cross and route fully visible with clear margins.\n",
+  "createdAt": "2026-10-01T21:46:58.325Z"
+}

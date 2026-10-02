@@ -1,0 +1,458 @@
+{
+  "tool": "build-phase",
+  "version": 2,
+  "startedAt": "2026-10-01T21:41:33.903Z",
+  "comp": ".impeccable/mocks/decision/homepage-playbook.png",
+  "direction": null,
+  "breakpoint": "1505x1045",
+  "artifact": null,
+  "phase": "responsive",
+  "phases": {
+    "comps": {
+      "status": "skipped",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [
+        {
+          "at": "2026-10-01T21:41:33.903Z",
+          "text": "started with an approved comp; the comp round happened before this state (surface round or manual)"
+        }
+      ],
+      "gate": null,
+      "forced": null
+    },
+    "spec": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:41:33.903Z",
+      "closedAt": "2026-10-01T21:44:11.105Z",
+      "attempts": 2,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "21 regions, 1 plates, 6 text regions measured",
+        "at": "2026-10-01T21:44:11.105Z"
+      },
+      "forced": null
+    },
+    "plates": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:44:11.105Z",
+      "closedAt": "2026-10-01T21:46:25.910Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "1/1 plates",
+        "at": "2026-10-01T21:46:25.910Z"
+      },
+      "forced": null
+    },
+    "hero": {
+      "status": "closed",
+      "openedAt": "2026-10-01T21:46:25.910Z",
+      "closedAt": "2026-10-02T03:01:37.415Z",
+      "attempts": 7,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "hero 85% (match)",
+        "score": 0.848,
+        "verdict": "match",
+        "report": ".impeccable/review/diff/hero/report.json",
+        "sideBySide": "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/hero/side-by-side.png",
+        "worst": [
+          "candidate drift 44%",
+          "office drift 50%",
+          "playbook-title drift 51%"
+        ],
+        "worstIds": [
+          "candidate",
+          "office",
+          "playbook-title"
+        ],
+        "worstCrops": [
+          {
+            "id": "candidate",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.4407,
+              "structure": 0.337,
+              "color": 0.7067,
+              "colorIntersection": 0.4004,
+              "paletteMatch": 0.8717,
+              "detail": 0.4502,
+              "detailRaw": 0.4867,
+              "detailAdded": 0.0729,
+              "bands": 0.28
+            },
+            "file": ".impeccable/review/diff/hero/regions/candidate.png"
+          },
+          {
+            "id": "office",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5019,
+              "structure": 0.5857,
+              "color": 0.5502,
+              "colorIntersection": 0.0591,
+              "paletteMatch": 0.8146,
+              "detail": 0.3298,
+              "detailRaw": 0.434,
+              "detailAdded": 0.2083,
+              "bands": 0.22
+            },
+            "file": ".impeccable/review/diff/hero/regions/office.png"
+          },
+          {
+            "id": "playbook-title",
+            "verdict": "drift",
+            "score": {
+              "overall": 0.5145,
+              "structure": 0.4442,
+              "color": 0.5968,
+              "colorIntersection": 0.387,
+              "paletteMatch": 0.7098,
+              "detail": 0.5769,
+              "detailRaw": 0.603,
+              "detailAdded": 0.0521,
+              "bands": 0.5667
+            },
+            "file": ".impeccable/review/diff/hero/regions/playbook-title.png"
+          }
+        ],
+        "advisories": [
+          "(advisory, above the 72% bar; fix in the polish pass before responsive) 1 reading:",
+          "  chrome story-ground: its ink is 83px tall in the build and 61px in the comp (+22px); match the height, not only the position",
+          "(advisory, unchanged for 3+ attempts) text candidate: ink is #f8f8f8 in the build, #0a3da6 in the comp; use the comp's colour",
+          "(advisory, unchanged for 3+ attempts) text story-heading: ink is #182848 in the build, #f4f7f8 in the comp; use the comp's colour"
+        ],
+        "regionVerdicts": {
+          "navigation": "match",
+          "brand": "drift",
+          "story-nav": "match",
+          "priorities-nav": "match",
+          "hero-ground": "drift",
+          "headline": "drift",
+          "candidate": "drift",
+          "office": "drift",
+          "primary-action": "drift",
+          "routes": "drift",
+          "playbook-ground": "match",
+          "playbook-title": "drift",
+          "playbook-rule": "match",
+          "play-one": "match",
+          "play-two": "match",
+          "play-three": "match",
+          "play-four": "match",
+          "story-ground": "match",
+          "story-heading": "drift",
+          "business-link": "match",
+          "politics-link": "match"
+        },
+        "at": "2026-10-02T03:01:37.415Z"
+      },
+      "forced": null,
+      "records": 1,
+      "readingsSeen": {
+        "text headline: letter-spacing is tighter than the comp's (gap 0.132 vs 0.309 of the cap height); set letter-spacing to open it by about 15px": 1,
+        "text headline: the face renders 44% heavier than the comp's (ink density 0.81 vs 0.56); drop a weight step or use the ranked face": 1,
+        "text brand: ink is #f8f8f8 in the build, #0c2157 in the comp; use the comp's colour": 1,
+        "text headline: ink is #f8f8f8 in the build, #093ca7 in the comp; use the comp's colour": 3,
+        "text candidate: ink is #f8f8f8 in the build, #0a3da6 in the comp; use the comp's colour": 6,
+        "text office: ink is #d8f868 in the build, #e7eff8 in the comp; use the comp's colour": 1,
+        "text playbook-title: ink is #182848 in the build, #f5f6f7 in the comp; use the comp's colour": 3,
+        "text story-heading: ink is #182848 in the build, #f4f7f8 in the comp; use the comp's colour": 7,
+        "control primary-action: its rule sits 1px into the box in the comp and 36px in the build (+35px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "chrome story-ground: its ink is 45px tall in the build and 61px in the comp (-16px); match the height, not only the position": 1,
+        "text headline: letter-spacing is tighter than the comp's (gap 0.120 vs 0.309 of the cap height); set letter-spacing to open it by about 16px": 1,
+        "text headline: the face renders 42% heavier than the comp's (ink density 0.80 vs 0.56); drop a weight step or use the ranked face": 1,
+        "control primary-action: its rule sits 1px into the box in the comp and 54px in the build (+53px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "control play-two: its rule sits 65px into the box in the comp and 2px in the build (-63px), so the strip is shorter than the comp's; match the height, not only the position": 1,
+        "control play-three: its rule sits 64px into the box in the comp and 2px in the build (-62px), so the strip is shorter than the comp's; match the height, not only the position": 1,
+        "text headline: the face renders 50% heavier than the comp's (ink density 0.84 vs 0.56); drop a weight step or use the ranked face": 1,
+        "text candidate: ink is #f6f6f8 in the build, #0a3da6 in the comp; use the comp's colour": 1,
+        "control play-two: its rule sits 65px into the box in the comp and 4px in the build (-61px), so the strip is shorter than the comp's; match the height, not only the position": 1,
+        "control play-three: its rule sits 64px into the box in the comp and 4px in the build (-60px), so the strip is shorter than the comp's; match the height, not only the position": 1,
+        "control primary-action: its rule sits 1px into the box in the comp and 51px in the build (+50px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "control play-two: its rule sits 65px into the box in the comp and 3px in the build (-62px), so the strip is shorter than the comp's; match the height, not only the position": 2,
+        "control play-three: its rule sits 64px into the box in the comp and 3px in the build (-61px), so the strip is shorter than the comp's; match the height, not only the position": 2,
+        "control primary-action: its rule sits 1px into the box in the comp and 56px in the build (+55px), so the strip is taller than the comp's; match the height, not only the position": 1,
+        "chrome story-ground: its ink is 83px tall in the build and 61px in the comp (+22px); match the height, not only the position": 2
+      },
+      "history": [
+        {
+          "at": "2026-10-02T02:55:19.467Z",
+          "score": 0.8215,
+          "worstIds": [
+            "story-heading",
+            "candidate",
+            "playbook-title"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "contradicted",
+            "candidate": "contradicted",
+            "office": "drift",
+            "primary-action": "contradicted",
+            "routes": "drift",
+            "playbook-ground": "match",
+            "playbook-title": "contradicted",
+            "playbook-rule": "match",
+            "play-one": "drift",
+            "play-two": "drift",
+            "play-three": "drift",
+            "play-four": "match",
+            "story-ground": "drift",
+            "story-heading": "contradicted",
+            "business-link": "missing",
+            "politics-link": "missing"
+          },
+          "artifactHash": "8948a280406b"
+        },
+        {
+          "at": "2026-10-02T02:56:05.814Z",
+          "score": 0.7738,
+          "worstIds": [
+            "story-heading",
+            "headline",
+            "playbook-title"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "contradicted",
+            "candidate": "contradicted",
+            "office": "drift",
+            "primary-action": "contradicted",
+            "routes": "drift",
+            "playbook-ground": "drift",
+            "playbook-title": "contradicted",
+            "playbook-rule": "drift",
+            "play-one": "drift",
+            "play-two": "drift",
+            "play-three": "drift",
+            "play-four": "match",
+            "story-ground": "drift",
+            "story-heading": "contradicted",
+            "business-link": "missing",
+            "politics-link": "missing"
+          },
+          "artifactHash": "ec0996ce9064"
+        },
+        {
+          "at": "2026-10-02T02:59:30.084Z",
+          "score": 0.7959,
+          "worstIds": [
+            "story-heading",
+            "playbook-title",
+            "candidate"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "contradicted",
+            "candidate": "drift",
+            "office": "drift",
+            "primary-action": "contradicted",
+            "routes": "drift",
+            "playbook-ground": "match",
+            "playbook-title": "contradicted",
+            "playbook-rule": "drift",
+            "play-one": "drift",
+            "play-two": "drift",
+            "play-three": "drift",
+            "play-four": "match",
+            "story-ground": "drift",
+            "story-heading": "contradicted",
+            "business-link": "missing",
+            "politics-link": "missing"
+          },
+          "artifactHash": "51ee9a1af5ce"
+        },
+        {
+          "at": "2026-10-02T03:00:18.198Z",
+          "score": 0.8212,
+          "worstIds": [
+            "story-heading",
+            "candidate",
+            "primary-action"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "drift",
+            "candidate": "drift",
+            "office": "drift",
+            "primary-action": "contradicted",
+            "routes": "drift",
+            "playbook-ground": "match",
+            "playbook-title": "drift",
+            "playbook-rule": "drift",
+            "play-one": "drift",
+            "play-two": "drift",
+            "play-three": "drift",
+            "play-four": "match",
+            "story-ground": "drift",
+            "story-heading": "contradicted",
+            "business-link": "missing",
+            "politics-link": "missing"
+          },
+          "artifactHash": "51ee9a1af5ce"
+        },
+        {
+          "at": "2026-10-02T03:01:02.033Z",
+          "score": 0.8457,
+          "worstIds": [
+            "candidate",
+            "office",
+            "playbook-title"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "drift",
+            "candidate": "drift",
+            "office": "drift",
+            "primary-action": "contradicted",
+            "routes": "drift",
+            "playbook-ground": "match",
+            "playbook-title": "drift",
+            "playbook-rule": "match",
+            "play-one": "match",
+            "play-two": "match",
+            "play-three": "match",
+            "play-four": "match",
+            "story-ground": "match",
+            "story-heading": "drift",
+            "business-link": "match",
+            "politics-link": "match"
+          },
+          "artifactHash": "51ee9a1af5ce"
+        },
+        {
+          "at": "2026-10-02T03:01:37.415Z",
+          "score": 0.848,
+          "worstIds": [
+            "candidate",
+            "office",
+            "playbook-title"
+          ],
+          "regionVerdicts": {
+            "navigation": "match",
+            "brand": "drift",
+            "story-nav": "match",
+            "priorities-nav": "match",
+            "hero-ground": "drift",
+            "headline": "drift",
+            "candidate": "drift",
+            "office": "drift",
+            "primary-action": "drift",
+            "routes": "drift",
+            "playbook-ground": "match",
+            "playbook-title": "drift",
+            "playbook-rule": "match",
+            "play-one": "match",
+            "play-two": "match",
+            "play-three": "match",
+            "play-four": "match",
+            "story-ground": "match",
+            "story-heading": "drift",
+            "business-link": "match",
+            "politics-link": "match"
+          },
+          "artifactHash": "51ee9a1af5ce"
+        }
+      ]
+    },
+    "sections": {
+      "status": "closed",
+      "openedAt": "2026-10-02T03:01:37.415Z",
+      "closedAt": "2026-10-02T03:03:58.743Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-02T03:03:58.743Z"
+      },
+      "forced": null
+    },
+    "motion": {
+      "status": "closed",
+      "openedAt": "2026-10-02T03:03:58.743Z",
+      "closedAt": "2026-10-02T03:03:58.752Z",
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": true,
+        "reasons": [],
+        "summary": "no mechanical gate",
+        "at": "2026-10-02T03:03:58.752Z"
+      },
+      "forced": null
+    },
+    "responsive": {
+      "status": "open",
+      "openedAt": "2026-10-02T03:03:58.752Z",
+      "closedAt": null,
+      "attempts": 1,
+      "notes": [],
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "at desktop width, region brand is missing",
+          "at desktop width, region story-nav is missing",
+          "at desktop width, region priorities-nav is missing",
+          "at desktop width, region office is missing",
+          "at desktop width, region business-link is missing",
+          "at desktop width, region politics-link is missing",
+          "at desktop width, region headline (text) is contradicted (structure 18%)",
+          "at desktop width, region candidate (text) is contradicted (structure 25%)"
+        ],
+        "summary": "desktop 77% (drift)",
+        "score": 0.7701,
+        "sideBySide": "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/desktop/side-by-side.png",
+        "at": "2026-10-02T03:06:31.393Z"
+      },
+      "forced": null
+    },
+    "review": {
+      "status": "pending",
+      "openedAt": null,
+      "closedAt": null,
+      "attempts": 0,
+      "notes": [],
+      "gate": null,
+      "forced": null
+    }
+  },
+  "finish": null,
+  "plates": {
+    "routes": {
+      "status": "ok",
+      "score": 0.7677,
+      "size": "1469x1071"
+    }
+  }
+}

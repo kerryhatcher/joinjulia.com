@@ -1,0 +1,822 @@
+{
+  "tool": "comp-diff",
+  "version": 1,
+  "createdAt": "2026-10-02T03:21:59.739Z",
+  "label": "hero-repro",
+  "comp": ".impeccable/mocks/decision/homepage-playbook.png",
+  "build": ".impeccable/review/hero-repro.png",
+  "spec": ".impeccable/build/spec.json",
+  "compSize": "1505x1045",
+  "buildSize": "1505x1045",
+  "align": "top",
+  "overall": 0.8485,
+  "verdict": "match",
+  "scores": {
+    "overall": 0.8485,
+    "structure": 0.8119,
+    "color": 0.8184,
+    "colorIntersection": 0.5755,
+    "paletteMatch": 0.9492,
+    "detail": 0.854,
+    "detailRaw": 0.8644,
+    "detailAdded": 0.0208,
+    "bands": 0.975
+  },
+  "palette": {
+    "comp": [
+      {
+        "hex": "#f8f8f8",
+        "coverage": 0.5811
+      },
+      {
+        "hex": "#093aa8",
+        "coverage": 0.3824
+      },
+      {
+        "hex": "#dff887",
+        "coverage": 0.0159
+      },
+      {
+        "hex": "#092456",
+        "coverage": 0.0122
+      },
+      {
+        "hex": "#080f4f",
+        "coverage": 0.0043
+      },
+      {
+        "hex": "#2568ee",
+        "coverage": 0.004
+      }
+    ],
+    "build": [
+      {
+        "hex": "#f8f8f8",
+        "coverage": 0.5785
+      },
+      {
+        "hex": "#1838a8",
+        "coverage": 0.3735
+      },
+      {
+        "hex": "#182848",
+        "coverage": 0.0205
+      },
+      {
+        "hex": "#d8f888",
+        "coverage": 0.0121
+      },
+      {
+        "hex": "#0858f6",
+        "coverage": 0.0091
+      },
+      {
+        "hex": "#d7f73b",
+        "coverage": 0.0062
+      }
+    ]
+  },
+  "regions": [
+    {
+      "id": "navigation",
+      "x": 0,
+      "y": 0,
+      "w": 1,
+      "h": 0.0517,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.9261,
+        "structure": 0.9893,
+        "color": 0.9749,
+        "colorIntersection": 0.9617,
+        "paletteMatch": 0.982,
+        "detail": 0.7446,
+        "detailRaw": 0.7498,
+        "detailAdded": 0.0104,
+        "bands": 1
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 52,
+          "y": 15,
+          "w": 1396,
+          "h": 27
+        },
+        "build": {
+          "x": 54,
+          "y": 16,
+          "w": 1395,
+          "h": 27
+        }
+      }
+    },
+    {
+      "id": "brand",
+      "x": 0.0352,
+      "y": 0.0134,
+      "w": 0.103,
+      "h": 0.0268,
+      "kind": "text",
+      "score": {
+        "overall": 0.7365,
+        "structure": 0.6199,
+        "color": 0.8518,
+        "colorIntersection": 0.7853,
+        "paletteMatch": 0.8876,
+        "detail": 0.8014,
+        "detailRaw": 0.8066,
+        "detailAdded": 0.0104,
+        "bands": 0.9333
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 11,
+          "w": 153,
+          "h": 27
+        },
+        "build": {
+          "x": 1,
+          "y": 12,
+          "w": 150,
+          "h": 27
+        }
+      }
+    },
+    {
+      "id": "story-nav",
+      "x": 0.812,
+      "y": 0.0134,
+      "w": 0.0611,
+      "h": 0.0249,
+      "kind": "control",
+      "score": {
+        "overall": 0.8661,
+        "structure": 0.8573,
+        "color": 0.8957,
+        "colorIntersection": 0.8514,
+        "paletteMatch": 0.9195,
+        "detail": 0.8339,
+        "detailRaw": 0.8495,
+        "detailAdded": 0.0313,
+        "bands": 0.85
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 4,
+          "y": 16,
+          "w": 82,
+          "h": 19
+        },
+        "build": {
+          "x": 5,
+          "y": 16,
+          "w": 81,
+          "h": 20
+        }
+      }
+    },
+    {
+      "id": "priorities-nav",
+      "x": 0.9003,
+      "y": 0.0134,
+      "w": 0.0651,
+      "h": 0.0249,
+      "kind": "control",
+      "score": {
+        "overall": 0.8837,
+        "structure": 0.8883,
+        "color": 0.8862,
+        "colorIntersection": 0.8316,
+        "paletteMatch": 0.9155,
+        "detail": 0.8693,
+        "detailRaw": 0.8693,
+        "detailAdded": 0,
+        "bands": 1
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 5,
+          "y": 14,
+          "w": 88,
+          "h": 18
+        },
+        "build": {
+          "x": 5,
+          "y": 15,
+          "w": 89,
+          "h": 17
+        }
+      }
+    },
+    {
+      "id": "hero-ground",
+      "x": 0,
+      "y": 0.0517,
+      "w": 1,
+      "h": 0.4823,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.7528,
+        "structure": 0.7061,
+        "color": 0.6631,
+        "colorIntersection": 0.199,
+        "paletteMatch": 0.913,
+        "detail": 0.8356,
+        "detailRaw": 0.8669,
+        "detailAdded": 0.0625,
+        "bands": 0.8733
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 49,
+          "w": 1505,
+          "h": 455
+        },
+        "build": {
+          "x": 56,
+          "y": 22,
+          "w": 1340,
+          "h": 456
+        }
+      }
+    },
+    {
+      "id": "headline",
+      "x": 0.0365,
+      "y": 0.0986,
+      "w": 0.4532,
+      "h": 0.2211,
+      "kind": "text",
+      "score": {
+        "overall": 0.5983,
+        "structure": 0.3722,
+        "color": 0.8124,
+        "colorIntersection": 0.5871,
+        "paletteMatch": 0.9336,
+        "detail": 0.8139,
+        "detailRaw": 0.8139,
+        "detailAdded": 0,
+        "bands": 0.87
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 682,
+          "h": 231
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 682,
+          "h": 231
+        }
+      }
+    },
+    {
+      "id": "candidate",
+      "x": 0.0372,
+      "y": 0.3388,
+      "w": 0.4532,
+      "h": 0.0526,
+      "kind": "text",
+      "score": {
+        "overall": 0.5456,
+        "structure": 0.4655,
+        "color": 0.7211,
+        "colorIntersection": 0.439,
+        "paletteMatch": 0.873,
+        "detail": 0.6614,
+        "detailRaw": 0.6614,
+        "detailAdded": 0,
+        "bands": 0.3333
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 682,
+          "h": 55
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 680,
+          "h": 42
+        }
+      }
+    },
+    {
+      "id": "office",
+      "x": 0.0372,
+      "y": 0.4038,
+      "w": 0.4292,
+      "h": 0.0316,
+      "kind": "text",
+      "score": {
+        "overall": 0.5019,
+        "structure": 0.5857,
+        "color": 0.5502,
+        "colorIntersection": 0.0591,
+        "paletteMatch": 0.8146,
+        "detail": 0.3298,
+        "detailRaw": 0.434,
+        "detailAdded": 0.2083,
+        "bands": 0.22
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 2,
+          "y": 8,
+          "w": 588,
+          "h": 32
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 545,
+          "h": 30
+        }
+      }
+    },
+    {
+      "id": "primary-action",
+      "x": 0.0372,
+      "y": 0.4507,
+      "w": 0.2525,
+      "h": 0.0574,
+      "kind": "control",
+      "score": {
+        "overall": 0.7348,
+        "structure": 0.7613,
+        "color": 0.7329,
+        "colorIntersection": 0.5804,
+        "paletteMatch": 0.815,
+        "detail": 0.6783,
+        "detailRaw": 0.6992,
+        "detailAdded": 0.0417,
+        "bands": 0.6095
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 380,
+          "h": 60
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 380,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "routes",
+      "x": 0.5329,
+      "y": 0.067,
+      "w": 0.4332,
+      "h": 0.4536,
+      "kind": "plate",
+      "score": {
+        "overall": 0.7803,
+        "structure": 0.939,
+        "color": 0.5924,
+        "colorIntersection": 0.0311,
+        "paletteMatch": 0.8946,
+        "detail": 0.7542,
+        "detailRaw": 0.7542,
+        "detailAdded": 0,
+        "bands": 1
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 23,
+          "y": 17,
+          "w": 607,
+          "h": 442
+        },
+        "build": {
+          "x": 58,
+          "y": 76,
+          "w": 536,
+          "h": 291
+        }
+      }
+    },
+    {
+      "id": "playbook-ground",
+      "x": 0,
+      "y": 0.534,
+      "w": 1,
+      "h": 0.3684,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.8854,
+        "structure": 0.9132,
+        "color": 0.9486,
+        "colorIntersection": 0.9203,
+        "paletteMatch": 0.9639,
+        "detail": 0.7285,
+        "detailRaw": 0.765,
+        "detailAdded": 0.0729,
+        "bands": 0.9765
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 56,
+          "y": 32,
+          "w": 1395,
+          "h": 330
+        },
+        "build": {
+          "x": 56,
+          "y": 27,
+          "w": 1393,
+          "h": 341
+        }
+      }
+    },
+    {
+      "id": "playbook-title",
+      "x": 0.0372,
+      "y": 0.5636,
+      "w": 0.2399,
+      "h": 0.044,
+      "kind": "text",
+      "score": {
+        "overall": 0.5072,
+        "structure": 0.4219,
+        "color": 0.6049,
+        "colorIntersection": 0.4015,
+        "paletteMatch": 0.7145,
+        "detail": 0.6146,
+        "detailRaw": 0.625,
+        "detailAdded": 0.0208,
+        "bands": 0.5286
+      },
+      "verdict": "drift",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 361,
+          "h": 48
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 361,
+          "h": 48
+        }
+      }
+    },
+    {
+      "id": "playbook-rule",
+      "x": 0.2877,
+      "y": 0.5847,
+      "w": 0.6764,
+      "h": 0.0019,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.8294,
+        "structure": 0.9999,
+        "color": 0.945,
+        "colorIntersection": 0.9583,
+        "paletteMatch": 0.9378,
+        "detail": 0.4929,
+        "detailRaw": 0.4929,
+        "detailAdded": 0,
+        "bands": 0.8
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 23,
+          "w": 1018,
+          "h": 3
+        },
+        "build": {
+          "x": 3,
+          "y": 21,
+          "w": 1013,
+          "h": 1
+        }
+      }
+    },
+    {
+      "id": "play-one",
+      "x": 0.0372,
+      "y": 0.6182,
+      "w": 0.9269,
+      "h": 0.0641,
+      "kind": "control",
+      "score": {
+        "overall": 0.8949,
+        "structure": 0.9231,
+        "color": 0.9265,
+        "colorIntersection": 0.9025,
+        "paletteMatch": 0.9395,
+        "detail": 0.7761,
+        "detailRaw": 0.7761,
+        "detailAdded": 0,
+        "bands": 0.84
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 4,
+          "w": 1395,
+          "h": 63
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 1393,
+          "h": 65
+        }
+      }
+    },
+    {
+      "id": "play-two",
+      "x": 0.0372,
+      "y": 0.6871,
+      "w": 0.9269,
+      "h": 0.0651,
+      "kind": "control",
+      "score": {
+        "overall": 0.914,
+        "structure": 0.9357,
+        "color": 0.9382,
+        "colorIntersection": 0.9058,
+        "paletteMatch": 0.9556,
+        "detail": 0.8227,
+        "detailRaw": 0.8279,
+        "detailAdded": 0.0104,
+        "bands": 0.85
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 5,
+          "w": 1395,
+          "h": 63
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 1393,
+          "h": 67
+        }
+      }
+    },
+    {
+      "id": "play-three",
+      "x": 0.0372,
+      "y": 0.7589,
+      "w": 0.9269,
+      "h": 0.0641,
+      "kind": "control",
+      "score": {
+        "overall": 0.9056,
+        "structure": 0.9325,
+        "color": 0.9441,
+        "colorIntersection": 0.9198,
+        "paletteMatch": 0.9572,
+        "detail": 0.7779,
+        "detailRaw": 0.7779,
+        "detailAdded": 0,
+        "bands": 0.8
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 3,
+          "w": 1395,
+          "h": 64
+        },
+        "build": {
+          "x": 0,
+          "y": 0,
+          "w": 1393,
+          "h": 66
+        }
+      }
+    },
+    {
+      "id": "play-four",
+      "x": 0.0372,
+      "y": 0.8287,
+      "w": 0.9269,
+      "h": 0.0641,
+      "kind": "control",
+      "score": {
+        "overall": 0.9268,
+        "structure": 0.9486,
+        "color": 0.9736,
+        "colorIntersection": 0.9538,
+        "paletteMatch": 0.9842,
+        "detail": 0.7958,
+        "detailRaw": 0.8062,
+        "detailAdded": 0.0208,
+        "bands": 0.6
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 11,
+          "y": 3,
+          "w": 1381,
+          "h": 51
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 1388,
+          "h": 60
+        }
+      }
+    },
+    {
+      "id": "story-ground",
+      "x": 0,
+      "y": 0.9024,
+      "w": 1,
+      "h": 0.0976,
+      "kind": "chrome",
+      "score": {
+        "overall": 0.839,
+        "structure": 0.9122,
+        "color": 0.9452,
+        "colorIntersection": 0.9111,
+        "paletteMatch": 0.9636,
+        "detail": 0.7196,
+        "detailRaw": 0.7561,
+        "detailAdded": 0.0729,
+        "bands": 0.69
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 58,
+          "y": 20,
+          "w": 1252,
+          "h": 61
+        },
+        "build": {
+          "x": 57,
+          "y": 19,
+          "w": 1359,
+          "h": 63
+        }
+      }
+    },
+    {
+      "id": "story-heading",
+      "x": 0.0365,
+      "y": 0.9311,
+      "w": 0.1615,
+      "h": 0.045,
+      "kind": "text",
+      "score": {
+        "overall": 0.3331,
+        "structure": 0.1572,
+        "color": 0.5963,
+        "colorIntersection": 0.3702,
+        "paletteMatch": 0.718,
+        "detail": 0.534,
+        "detailRaw": 0.5496,
+        "detailAdded": 0.0313,
+        "bands": 0.2533
+      },
+      "verdict": "contradicted",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 243,
+          "h": 48
+        },
+        "build": {
+          "x": 2,
+          "y": 0,
+          "w": 196,
+          "h": 39
+        }
+      }
+    },
+    {
+      "id": "business-link",
+      "x": 0.3316,
+      "y": 0.9215,
+      "w": 0.2664,
+      "h": 0.0593,
+      "kind": "control",
+      "score": {
+        "overall": 0.8369,
+        "structure": 0.8196,
+        "color": 0.9161,
+        "colorIntersection": 0.865,
+        "paletteMatch": 0.9436,
+        "detail": 0.7374,
+        "detailRaw": 0.7843,
+        "detailAdded": 0.0938,
+        "bands": 1
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 339,
+          "h": 61
+        },
+        "build": {
+          "x": 11,
+          "y": 0,
+          "w": 305,
+          "h": 62
+        }
+      }
+    },
+    {
+      "id": "politics-link",
+      "x": 0.6591,
+      "y": 0.9215,
+      "w": 0.305,
+      "h": 0.0593,
+      "kind": "control",
+      "score": {
+        "overall": 0.8221,
+        "structure": 0.8207,
+        "color": 0.9322,
+        "colorIntersection": 0.8997,
+        "paletteMatch": 0.9497,
+        "detail": 0.6326,
+        "detailRaw": 0.7471,
+        "detailAdded": 0.2292,
+        "bands": 0.66
+      },
+      "verdict": "match",
+      "inkBox": {
+        "comp": {
+          "x": 0,
+          "y": 0,
+          "w": 318,
+          "h": 61
+        },
+        "build": {
+          "x": 14,
+          "y": 0,
+          "w": 410,
+          "h": 62
+        }
+      }
+    }
+  ],
+  "files": {
+    "sideBySide": "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/side-by-side.png",
+    "heatmap": "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/heatmap.png",
+    "regionFiles": [
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/navigation.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/brand.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/story-nav.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/priorities-nav.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/hero-ground.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/headline.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/candidate.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/office.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/primary-action.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/routes.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/playbook-ground.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/playbook-title.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/playbook-rule.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/play-one.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/play-two.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/play-three.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/play-four.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/story-ground.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/story-heading.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/business-link.png",
+      "/home/kwhatcher/projects/joinjulia.com/.impeccable/review/diff/final/regions/politics-link.png"
+    ]
+  }
+}

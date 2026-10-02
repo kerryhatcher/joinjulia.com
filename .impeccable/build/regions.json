@@ -1,0 +1,280 @@
+{
+  "regions": [
+    {
+      "id": "navigation",
+      "kind": "chrome",
+      "box": {
+        "x": 0.0,
+        "y": 0.0,
+        "w": 1.0,
+        "h": 0.05167464114832536
+      },
+      "note": "white navigation strip",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "brand",
+      "kind": "text",
+      "box": {
+        "x": 0.03521594684385382,
+        "y": 0.013397129186602871,
+        "w": 0.10299003322259136,
+        "h": 0.026794258373205742
+      },
+      "note": "joinjulia.com",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "story-nav",
+      "kind": "control",
+      "box": {
+        "x": 0.8119601328903654,
+        "y": 0.013397129186602871,
+        "w": 0.061129568106312294,
+        "h": 0.024880382775119617
+      },
+      "note": "My story navigation link",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "priorities-nav",
+      "kind": "control",
+      "box": {
+        "x": 0.9003322259136213,
+        "y": 0.013397129186602871,
+        "w": 0.06511627906976744,
+        "h": 0.024880382775119617
+      },
+      "note": "Priorities navigation link",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "hero-ground",
+      "kind": "chrome",
+      "box": {
+        "x": 0.0,
+        "y": 0.05167464114832536,
+        "w": 1.0,
+        "h": 0.48229665071770333
+      },
+      "note": "solid royal blue hero background",
+      "container": true,
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "headline",
+      "kind": "text",
+      "box": {
+        "x": 0.036544850498338874,
+        "y": 0.09856459330143541,
+        "w": 0.453156146179402,
+        "h": 0.22105263157894736
+      },
+      "note": "DEMOCRATS ON OFFENSE athletic white headline",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "candidate",
+      "kind": "text",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.33875598086124403,
+        "w": 0.453156146179402,
+        "h": 0.05263157894736842
+      },
+      "note": "JULIA ADELE CALLAHAN white athletic name",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "office",
+      "kind": "text",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.40382775119617226,
+        "w": 0.4292358803986711,
+        "h": 0.031578947368421054
+      },
+      "note": "For Bibb County Democratic Party Chair",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "primary-action",
+      "kind": "control",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.4507177033492823,
+        "w": 0.25249169435215946,
+        "h": 0.05741626794258373
+      },
+      "note": "lime Explore the priorities button",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "routes",
+      "kind": "plate",
+      "box": {
+        "x": 0.532890365448505,
+        "y": 0.06698564593301436,
+        "w": 0.43322259136212626,
+        "h": 0.4535885167464115
+      },
+      "note": "lime offensive football route diagram with six outlined circles, five X marks and curved advancing arrow lines over thin lighter blue field markings; solid royal blue ground",
+      "bleed": true,
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "playbook-ground",
+      "kind": "chrome",
+      "box": {
+        "x": 0,
+        "y": 0.5339712918660288,
+        "w": 1,
+        "h": 0.3684210526315789
+      },
+      "grid": "A5:J9",
+      "note": "white playbook section background",
+      "container": true,
+      "snap": false
+    },
+    {
+      "id": "playbook-title",
+      "kind": "text",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.5636363636363636,
+        "w": 0.2398671096345515,
+        "h": 0.04401913875598086
+      },
+      "note": "THE PLAYBOOK navy athletic heading",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "playbook-rule",
+      "kind": "chrome",
+      "box": {
+        "x": 0.2877076411960133,
+        "y": 0.584688995215311,
+        "w": 0.6764119601328904,
+        "h": 0.0019138755980861245
+      },
+      "note": "thin navy rule",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "play-one",
+      "kind": "control",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.6181818181818182,
+        "w": 0.9269102990033222,
+        "h": 0.06411483253588517
+      },
+      "note": "01 Jail & public safety reform arrow and underline",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "play-two",
+      "kind": "control",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.6870813397129186,
+        "w": 0.9269102990033222,
+        "h": 0.06507177033492823
+      },
+      "note": "02 Election accessibility arrow and underline",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "play-three",
+      "kind": "control",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.7588516746411483,
+        "w": 0.9269102990033222,
+        "h": 0.06411483253588517
+      },
+      "note": "03 Healthcare arrow and underline",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "play-four",
+      "kind": "control",
+      "box": {
+        "x": 0.037209302325581395,
+        "y": 0.8287081339712918,
+        "w": 0.9269102990033222,
+        "h": 0.06411483253588517
+      },
+      "note": "04 Education arrow",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "story-ground",
+      "kind": "chrome",
+      "box": {
+        "x": 0.0,
+        "y": 0.9023923444976076,
+        "w": 1.0,
+        "h": 0.09760765550239234
+      },
+      "note": "very pale blue story strip",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "story-heading",
+      "kind": "text",
+      "box": {
+        "x": 0.036544850498338874,
+        "y": 0.9311004784688995,
+        "w": 0.16146179401993355,
+        "h": 0.044976076555023926
+      },
+      "note": "MY STORY varsity heading",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "business-link",
+      "kind": "control",
+      "box": {
+        "x": 0.3315614617940199,
+        "y": 0.9215311004784689,
+        "w": 0.2664451827242525,
+        "h": 0.05933014354066986
+      },
+      "note": "How my business started arrow and thin left divider",
+      "grid": "A0:J9",
+      "snap": false
+    },
+    {
+      "id": "politics-link",
+      "kind": "control",
+      "box": {
+        "x": 0.6591362126245848,
+        "y": 0.9215311004784689,
+        "w": 0.30498338870431896,
+        "h": 0.05933014354066986
+      },
+      "note": "My journey into politics arrow and thin left divider",
+      "grid": "A0:J9",
+      "snap": false
+    }
+  ]
+}

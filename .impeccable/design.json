@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T03:27:53Z",
+  "title": "Design System: Julia Adele Callahan",
+  "extensions": {
+    "colorMeta": {
+      "blue": {
+        "role": "primary",
+        "displayName": "Campaign Blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.1768 263.41)",
+          "oklch(26.43% 0.1768 263.41)",
+          "oklch(37.86% 0.1768 263.41)",
+          "oklch(49.29% 0.1768 263.41)",
+          "oklch(60.71% 0.1768 263.41)",
+          "oklch(72.14% 0.1768 263.41)",
+          "oklch(83.57% 0.1768 263.41)",
+          "oklch(95.00% 0.1768 263.41)"
+        ]
+      },
+      "navy": {
+        "role": "neutral",
+        "displayName": "Reading Navy",
+        "tonalRamp": [
+          "oklch(15.00% 0.0628 256.76)",
+          "oklch(26.43% 0.0628 256.76)",
+          "oklch(37.86% 0.0628 256.76)",
+          "oklch(49.29% 0.0628 256.76)",
+          "oklch(60.71% 0.0628 256.76)",
+          "oklch(72.14% 0.0628 256.76)",
+          "oklch(83.57% 0.0628 256.76)",
+          "oklch(95.00% 0.0628 256.76)"
+        ]
+      },
+      "lime": {
+        "role": "secondary",
+        "displayName": "Offensive Lime",
+        "tonalRamp": [
+          "oklch(15.00% 0.1411 120.33)",
+          "oklch(26.43% 0.1411 120.33)",
+          "oklch(37.86% 0.1411 120.33)",
+          "oklch(49.29% 0.1411 120.33)",
+          "oklch(60.71% 0.1411 120.33)",
+          "oklch(72.14% 0.1411 120.33)",
+          "oklch(83.57% 0.1411 120.33)",
+          "oklch(95.00% 0.1411 120.33)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15.00% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95.00% 0 0)"
+        ]
+      },
+      "pale": {
+        "role": "neutral",
+        "displayName": "Story Pale Blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.0091 258.34)",
+          "oklch(26.43% 0.0091 258.34)",
+          "oklch(37.86% 0.0091 258.34)",
+          "oklch(49.29% 0.0091 258.34)",
+          "oklch(60.71% 0.0091 258.34)",
+          "oklch(72.14% 0.0091 258.34)",
+          "oklch(83.57% 0.0091 258.34)",
+          "oklch(95.00% 0.0091 258.34)"
+        ]
+      },
+      "border-soft": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "tonalRamp": [
+          "oklch(15.00% 0.0357 260.38)",
+          "oklch(26.43% 0.0357 260.38)",
+          "oklch(37.86% 0.0357 260.38)",
+          "oklch(49.29% 0.0357 260.38)",
+          "oklch(60.71% 0.0357 260.38)",
+          "oklch(72.14% 0.0357 260.38)",
+          "oklch(83.57% 0.0357 260.38)",
+          "oklch(95.00% 0.0357 260.38)"
+        ]
+      },
+      "border-action": {
+        "role": "neutral",
+        "displayName": "Action Edge",
+        "tonalRamp": [
+          "oklch(15.00% 0.0865 128.93)",
+          "oklch(26.43% 0.0865 128.93)",
+          "oklch(37.86% 0.0865 128.93)",
+          "oklch(49.29% 0.0865 128.93)",
+          "oklch(60.71% 0.0865 128.93)",
+          "oklch(72.14% 0.0865 128.93)",
+          "oklch(83.57% 0.0865 128.93)",
+          "oklch(95.00% 0.0865 128.93)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Campaign display",
+        "purpose": "Two-line uppercase campaign headline."
+      },
+      "candidate": {
+        "displayName": "Candidate name",
+        "purpose": "Uppercase candidate identity with a separate fluid scale."
+      },
+      "headline": {
+        "displayName": "Section heading",
+        "purpose": "Athletic uppercase section titles."
+      },
+      "title": {
+        "displayName": "Story title",
+        "purpose": "Balanced uppercase story headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable sentence-case descriptions and disclosure content."
+      },
+      "story-body": {
+        "displayName": "Story body",
+        "purpose": "Longer story passages with a 65ch reading measure."
+      },
+      "priority-title": {
+        "displayName": "Priority title",
+        "purpose": "Bold Barlow labels inside native issue disclosures."
+      },
+      "publication": {
+        "displayName": "Publication label",
+        "purpose": "Semibold source names in reading rows."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Directional arrow state changes."
+      },
+      {
+        "name": "arrow-transition",
+        "value": "transform 260ms var(--ease)",
+        "purpose": "Advance arrows by 4px on link hover; rotate the open disclosure arrow by 90 degrees."
+      },
+      {
+        "name": "action-transition",
+        "value": "background 180ms ease",
+        "purpose": "Change the lime action to white on hover."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none !important; transition: none !important; scroll-behavior: auto",
+        "purpose": "Disable transitions and smooth scrolling for the reduced-motion preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "small-mobile",
+        "value": "360px",
+        "query": "(max-width: 360px)"
+      },
+      {
+        "name": "stacked",
+        "value": "760px",
+        "query": "(max-width: 760px)"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px",
+        "query": "(max-width: 1100px)"
+      },
+      {
+        "name": "wide-alignment",
+        "value": "1680px",
+        "query": "(min-width: 1680px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Square lime anchor for the main section or connection action.",
+      "html": "<a class=\"ds-primary\" href=\"#priorities\">Explore the priorities <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 30px;min-height:60px;min-width:380px;border:1px solid var(--border-action,#9db97e);border-radius:0;color:var(--navy,#102644);background:var(--lime,#ddf888);font-family:var(--body,'Barlow',sans-serif);font-size:28px;font-weight:700;line-height:1.2;text-decoration:none;transition:background 180ms ease}.ds-primary:hover{background:var(--white,#fff)}.ds-primary:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:1100px){.ds-primary{min-width:0;font-size:22px;padding-inline:22px}}@media(max-width:760px){.ds-primary{font-size:21px;min-height:56px}}@media(max-width:360px){.ds-primary{font-size:19px;padding-inline:16px;gap:16px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "description": "Visible domain wordmark and two sentence-case section links.",
+      "html": "<div class=\"ds-header\"><a class=\"ds-wordmark\" href=\"/\">joinjulia.com</a><nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#my-story\">My story</a><a href=\"#priorities\">Priorities</a></nav></div>",
+      "css": ".ds-header{height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white,#fff);color:var(--navy,#102644);font-family:var(--body,'Barlow',sans-serif)}.ds-wordmark{font-size:28px;font-weight:700;letter-spacing:-.025em;text-decoration:none;color:inherit}.ds-nav{display:flex;gap:50px}.ds-nav a{font-size:22px;font-weight:700;text-decoration:none;color:inherit}.ds-nav a:hover{text-decoration:underline}.ds-wordmark:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:760px){.ds-header{height:64px;gap:16px}.ds-wordmark{font-size:23px}.ds-nav{gap:20px}.ds-nav a{font-size:17px;min-height:44px;display:flex;align-items:center}}@media(max-width:360px){.ds-nav{gap:12px}.ds-nav a{font-size:15px}.ds-wordmark{font-size:21px}}"
+    },
+    {
+      "name": "Numbered priority disclosure",
+      "kind": "custom",
+      "refersTo": "priority-row",
+      "description": "Exclusive native disclosure with a blue play number and rotating arrow.",
+      "html": "<details class=\"ds-priority\" name=\"ds-playbook\"><summary><span class=\"ds-number\" aria-hidden=\"true\">01</span><span class=\"ds-priority-title\">Jail &amp; public safety reform</span><svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></summary><div class=\"ds-priority-content\"><p>Julia’s full priority statement is coming soon. Follow along as the campaign playbook takes shape.</p></div></details>",
+      "css": ".ds-priority{border-bottom:1px solid var(--navy,#102644);color:var(--navy,#102644);font-family:var(--body,'Barlow',sans-serif)}.ds-priority summary{display:grid;grid-template-columns:130px 1fr 28px;align-items:center;gap:46px;min-height:73px;list-style:none;cursor:pointer}.ds-priority summary::-webkit-details-marker{display:none}.ds-number{font-family:var(--display,'Julia Playbook',sans-serif);font-size:62px;font-weight:700;color:var(--blue,#103ca6);line-height:1;font-variant-numeric:tabular-nums;border-right:1px solid var(--navy,#102644)}.ds-priority-title{font-size:30px;font-weight:700;line-height:1.3}.ds-priority summary:hover .ds-priority-title{color:var(--blue,#103ca6)}.ds-priority summary:hover .ds-arrow{transform:translateX(4px)}.ds-priority[open] summary .ds-arrow{transform:rotate(90deg)}.ds-priority-content{padding:8px 50px 28px 176px;max-width:1000px;font-size:18px;line-height:1.6}.ds-priority-content p{max-width:65ch}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:1100px){.ds-priority summary{grid-template-columns:100px 1fr 28px;gap:28px}.ds-priority-content{padding-left:128px}}@media(max-width:760px){.ds-priority summary{grid-template-columns:64px 1fr 24px;gap:18px;min-height:86px}.ds-number{font-size:42px}.ds-priority-title{font-size:22px}.ds-priority .ds-arrow{width:24px;height:24px}.ds-priority-content{padding:8px 4px 28px 82px;font-size:17px}}@media(max-width:360px){.ds-priority summary{grid-template-columns:54px 1fr 20px;gap:14px}.ds-priority-title{font-size:20px}.ds-priority-content{padding-left:68px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Story index link",
+      "kind": "custom",
+      "refersTo": "story-strip",
+      "description": "Open pale story strip with a directional anchor and a structural divider.",
+      "html": "<div class=\"ds-story-strip\"><a class=\"ds-story-link\" href=\"#business-story\">How my business started <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a></div>",
+      "css": ".ds-story-strip{background:var(--pale,#f2f6fc);color:var(--navy,#102644)}.ds-story-link{display:flex;align-items:center;justify-content:space-between;gap:16px;border-left:1px solid var(--navy,#102644);padding:16px 30px 16px 42px;font-family:var(--body,'Barlow',sans-serif);font-size:24px;font-weight:600;text-decoration:none;color:inherit;line-height:1.3}.ds-story-link:hover{text-decoration:underline}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:1100px){.ds-story-link{font-size:20px;padding-inline:24px 8px}}@media(max-width:760px){.ds-story-link{border-left:0;border-top:1px solid var(--border-soft,#bdcbe2);min-height:68px;padding:16px 0;font-size:21px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Publication reading row",
+      "kind": "custom",
+      "refersTo": "publication-label",
+      "description": "Ruled external link with a source label, readable title, and right arrow.",
+      "html": "<a class=\"ds-reading\" href=\"https://msmagazine.com/author/jcallahan/\" target=\"_blank\" rel=\"noopener noreferrer\"><span class=\"ds-publication\">Ms. Magazine</span><span class=\"ds-reading-title\">Julia’s writing on reproductive rights</span><svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
+      "css": ".ds-reading{display:grid;grid-template-columns:1fr 1.8fr 28px;align-items:center;gap:40px;padding-block:26px;border-top:1px solid var(--border-soft,#bdcbe2);text-decoration:none;color:var(--navy,#102644);font-family:var(--body,'Barlow',sans-serif)}.ds-publication{font-size:17px;font-weight:600;line-height:1.4}.ds-reading-title{font-size:25px;font-weight:600;line-height:1.35}.ds-reading:hover .ds-reading-title{text-decoration:underline}.ds-reading:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:760px){.ds-reading{grid-template-columns:1fr 24px;gap:10px 16px;padding-block:22px}.ds-publication{grid-column:1;font-size:15px}.ds-reading-title{grid-column:1;grid-row:2;font-size:21px}.ds-reading .ds-arrow{grid-column:2;grid-row:1/3;width:24px;height:24px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Inline text link",
+      "kind": "custom",
+      "description": "Underlined Barlow link for related reading inside a passage.",
+      "html": "<a class=\"ds-text-link\" href=\"https://msmagazine.com/author/jcallahan/\" target=\"_blank\" rel=\"noopener noreferrer\">Read Julia’s writing <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
+      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:12px;font-family:var(--body,'Barlow',sans-serif);font-size:18px;font-weight:600;line-height:1.6;color:var(--navy,#102644);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}.ds-text-link .ds-arrow{width:20px;height:20px}.ds-text-link:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Playbook",
+    "overview": "A civic offensive playbook carries the user-confirmed football theme through angular athletic lettering, advancing route marks, numbered plays, and decisive lime actions. Royal blue establishes the campaign's voice; open white and pale reading surfaces let longer stories breathe.\n\nThe visual system is direct and flat. Rules organize content into continuous passages rather than floating cards. Display lettering supplies energy while Barlow keeps navigation, controls, and prose readable. The selected homepage composition remains in `.impeccable/surfaces/src-pages-index-astro.md`; this document records the reusable implementation.",
+    "keyCharacteristics": [
+      "Angular uppercase display lettering with readable sentence-case prose.",
+      "Royal blue campaign bands, lime actions, and navy reading text.",
+      "Continuous ruled rows and open story passages.",
+      "Native disclosures and restrained directional motion."
+    ],
+    "rules": [
+      {
+        "name": "The Campaign Contrast Rule",
+        "body": "Use white text on campaign blue and navy text on lime or light reading surfaces. Focus switches to lime on blue bands.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Julia Playbook carries headings and play numbers; Barlow carries explanations and interaction labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Continuous Field Rule",
+        "body": "Use shared section gutters, full-width bands, and ruled rows to connect content. Stack the reading order naturally when columns no longer fit.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do keep angular uppercase display type paired with Barlow prose and controls.",
+      "Do maintain navy-on-light and white-on-blue reading contrast, with visible focus in the appropriate accent.",
+      "Do use continuous ruled rows and responsive reading order for related content.",
+      "Do preserve native disclosure semantics, real link destinations, and reduced-motion behavior.",
+      "Do retain font attribution, licensing, modification source, and generated-asset provenance."
+    ],
+    "donts": [
+      "Don't introduce rounded card grids, decorative gradients, or shadow elevation into this flat playbook system.",
+      "Don't replace the established angular athletic display with slab-serif or generic system display typography.",
+      "Don't treat biography placeholders or forthcoming priority statements as confirmed campaign facts.",
+      "Don't use the selected concept screenshot as a production graphic."
+    ]
+  }
+}
