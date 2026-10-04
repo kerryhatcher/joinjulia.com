@@ -205,3 +205,9 @@ Publication labels, larger article descriptions, and inline arrows form ruled ex
 - **Don't** use the selected concept screenshot as a production graphic.
 
 Not canonized: lorem ipsum and forthcoming statements are content gaps, not reusable copy; no unresolved visual defect was established by the final scoped finish verdict. Preview-only tonal ramps in the sidecar do not extend the production palette.
+
+## Homepage photography
+
+User-supplied photographs now anchor the campaign: the square headshot is the primary hero portrait, with a restrained route diagram behind it and an 8px lime baseline. The politics passage pairs a vertical speaking photograph in its heading column with a landscape discussion photograph below the prose. Mobile stacks these elements in reading order. Frames stay square-edged, without shadows or masks.
+
+Astro generates responsive WebP sources from the original uploads. The headshot loads eagerly with high priority; story photographs load lazily. Intrinsic dimensions and explicit aspect ratios reserve space. The discussion image uses a 3:2 crop at vertical position 37.5% to remove its embedded white bands. Caption text uses Barlow at 16px with 1.5 line height, matching the existing footer’s small reading scale. Captions describe observed scenes and leave unverified event details out. Source filenames, review notes, and fingerprints are recorded in IMAGE_INDEX.md.
