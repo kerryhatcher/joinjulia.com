@@ -47,6 +47,8 @@ h1 span { display: block; white-space: nowrap; transform: scaleX(1.1); transform
 .hero-portrait { position: relative; display: block; width: 100%; max-width: 440px; height: auto; aspect-ratio: 1; border-bottom: 8px solid var(--lime); }
 figure { margin: 0; }
 .story-visual { min-width: 0; }
+.business-photo { margin-top: 32px; max-width: 460px; }
+.business-photo img { display: block; width: 100%; height: auto; }
 .speaking-photo { margin-top: 32px; max-width: 460px; }
 .speaking-photo img { display: block; width: 100%; height: auto; }
 figcaption { margin-top: 12px; font-size: 16px; line-height: 1.5; max-width: 55ch; }
@@ -139,6 +141,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3vw, 
   .hero-portrait { max-width: 400px; }
   .play-diagram { width: 100%; height: 100%; }
   .speaking-photo { margin-top: 24px; max-width: none; }
+  .business-photo { margin-top: 24px; max-width: none; }
   .speaking-photo img { max-height: 560px; object-fit: cover; object-position: center 35%; }
   .meeting-photo { margin-top: 28px; }
   .playbook { padding-top: 26px; padding-bottom: 18px; }
