@@ -6,29 +6,56 @@ Static Astro, self-hosted fonts, and an original football playbook graphic. The 
 
 ## Development
 
-Use Node.js 22.12 or newer.
+Use Bun 1.3.14 and Node.js 22.12 or newer (Astro and Wrangler run on Node.js).
 
 ```sh
-npm ci
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
 Open http://localhost:4321. To build and inspect the production site:
 
 ```sh
-npm run build
-npm run preview
+bun run build
+bun run preview
 ```
 
-Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages. Use `npm ci && npm run build` as the build command and `dist` as the output directory. Local builds default to `https://joinjulia.com/`; `SITE_URL` and `BASE_PATH` can override the origin and deployment path.
+Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages. Use `bun install --frozen-lockfile && bun run build` as the build command and `dist` as the output directory. Local builds default to `https://joinjulia.com/`; `SITE_URL` and `BASE_PATH` can override the origin and deployment path.
 
-## GitHub Pages
+## Cloudflare Pages
 
-`.github/workflows/deploy.yml` deploys on pushes to `main` and can also be run manually from the Actions tab. It uses Node.js 24, installs the committed lockfile with `npm ci`, builds Astro, uploads only `dist/`, and deploys to the `github-pages` environment. Authentication uses the built-in GitHub token; no deployment secret is needed.
+The `joinjulia` Direct Upload project lives in the **Julia Callahan** Cloudflare account (`e33f99b627bf3afdbc0311ed464a1e42`). Its production branch is `main`, output directory is `dist/`, and production domain is **https://joinjulia.com**. `wrangler.jsonc` records the local deployment configuration. No Astro server adapter or Pages Functions are needed.
 
-In the repository's **Settings → Pages**, select **GitHub Actions** as the build source. The workflow reads the Pages URL and base path, so the default `https://kerryhatcher.github.io/joinjulia.com/` address and a configured custom domain both work, including fonts, images, home links, and canonical metadata.
+`.github/workflows/deploy.yml` installs dependencies with Bun's frozen lockfile, builds the static site, and uploads `dist/` to Cloudflare using `cloudflare/wrangler-action`. Pushes to `main` deploy production. Manual runs deploy only when run against `main`. Builds use `/` as the base path and `https://joinjulia.com` as the production origin.
 
-To use `joinjulia.com`, configure it under **Settings → Pages → Custom domain**, point its DNS at GitHub Pages, and enable HTTPS when available. Rerun the deployment after changing the domain so the build picks up the updated origin and path. GitHub Actions deployments use the repository's custom-domain setting; they do not require a `CNAME` file. See [GitHub's custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+### Repository credentials
+
+In [GitHub Actions settings](https://github.com/kerryhatcher/joinjulia.com/settings/secrets/actions), configure:
+
+| Type | Name | Value |
+| --- | --- | --- |
+| Actions variable | `CLOUDFLARE_ACCOUNT_ID` | `e33f99b627bf3afdbc0311ed464a1e42` |
+| Actions secret | `CLOUDFLARE_API_TOKEN` | A Cloudflare token with **Account → Cloudflare Pages → Edit**, scoped to the **Julia Callahan** account |
+
+The account variable and deployment secret are configured. For credential rotation, create a replacement Pages token and update the Actions secret. Keep the token out of source control. The token needs no DNS permissions for routine deployments.
+
+### Pull-request previews
+
+Opening, reopening, or updating a pull request from this repository builds and deploys a preview using the Pages branch `pr-<number>`. Its stable address is `https://pr-<number>.joinjulia.pages.dev`; later commits update that address without changing production. Each deployment also has an immutable URL, available in the Actions job summary and its GitHub environment (`preview-pr-<number>`).
+
+Preview builds use their preview origin for canonical metadata, disallow crawlers in `robots.txt`, and return `X-Robots-Tag: noindex, nofollow`. Previews are public. Fork pull requests run the build but skip deployment because they cannot access the Cloudflare secret. Preview deployments remain available after a pull request closes; remove old deployments through Cloudflare Pages when no longer needed.
+
+### Domain and deployment
+
+`joinjulia.com` is attached to the Pages project, with a proxied apex CNAME pointing at `joinjulia.pages.dev`. Cloudflare handles HTTPS and apex CNAME flattening. The first successful production deployment is required before the site is served, and certificate/domain activation can take time. GitHub Pages settings are no longer used by this workflow.
+
+For an authenticated local production deployment:
+
+```sh
+bun run deploy
+```
+
+Use `bunx wrangler login` first, or provide `CLOUDFLARE_API_TOKEN` through your shell's secure credential mechanism. See [Cloudflare's Direct Upload CI guide](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/) and [Pages custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
 
 ## Content
 

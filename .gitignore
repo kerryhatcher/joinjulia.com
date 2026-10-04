@@ -145,6 +145,9 @@ vite.config.ts.timestamp-*
 # Astro-generated types and local browser verification
 .astro/
 .playwright-cli/
+.wrangler/
+.dev.vars
+.dev.vars.*
 
 # Local design-preview process state
 .impeccable/questions/*.state.json
