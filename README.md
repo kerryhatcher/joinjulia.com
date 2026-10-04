@@ -65,7 +65,7 @@ The homepage includes descriptive title and sharing metadata, `WebSite` and `Per
 
 After merging, submit `https://www.joinjulia.com/sitemap-index.xml` in Google Search Console and inspect the homepage's indexing and canonical URL. Approved biography and policy copy is still required. Repository `AGENTS.md` guides coding agents and is not published; `llms.txt` is deferred until substantive approved content is available. These files do not promise ranking improvements.
 
-The production `joinjulia.pages.dev` hostname still needs a Cloudflare Bulk Redirect to the www domain. This is account configuration rather than a Pages `_redirects` rule (domain-level redirects are unsupported there). Scope that redirect to the exact production hostname so PR preview subdomains remain available. This branch does not change live production account rules.
+The production `joinjulia.pages.dev` hostname redirects to `https://www.joinjulia.com/` through the account-level Cloudflare Bulk Redirect list `joinjulia_production_redirect` and its enabled rule. The redirect uses HTTP 301, preserves query strings and path suffixes, and enables subpath matching. Include subdomains is disabled so PR preview subdomains remain available. This is live account configuration rather than a Pages `_redirects` rule; no site redeployment is required.
 
 ## Contact form
 
@@ -77,7 +77,7 @@ The campaign closing link and footer link lead to `#contact`. Formspree handles 
 
 Edit `src/pages/index.astro` for homepage copy, priority subjects, story sections, press links, and social links. Edit `src/styles/global.css` for the visual system.
 
-Both personal stories intentionally contain lorem ipsum. Detailed priority statements are explicitly marked as coming soon. Replace these with Julia's approved copy before publishing. The four priority subjects come from the saved Playbook design choice in `.impeccable/questions/62329d60.answer.json` and its selected concept; no policy details, election dates, endorsements, or donation links were invented.
+The business story is drafted from Julia's background supplied by the site owner and her dated posts: her father's death in January 2023, caregiving responsibilities for her sibling and young children, and the June 2023 announcement of Dream Clean Housekeeping Company. The draft connects those experiences to her stated support for mothers, families, mental health, and small businesses. Julia should review the wording before publication. Detailed priority statements are explicitly marked as coming soon and still require approved copy. The four priority subjects come from the saved Playbook design choice in `.impeccable/questions/62329d60.answer.json` and its selected concept; no policy details, election dates, endorsements, or donation links were invented.
 
 Source links come from the supplied campaign brief. The homepage includes Julia's author pages at [Ms. Magazine](https://msmagazine.com/author/jcallahan/) and [Georgia Recorder](https://georgiarecorder.com/author/juliacallhan/), plus the supplied [CAP Action story](https://www.americanprogressaction.org/article/without-child-tax-credit-some-georgia-parents-must-leave-workforce-to-care-for-their-children/). These are reading links, not endorsements.
 

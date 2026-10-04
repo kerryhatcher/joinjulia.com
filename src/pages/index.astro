@@ -7,6 +7,7 @@ import { Image } from 'astro:assets';
 import headshot from '../../public/images/headshot.jpg';
 import speaking from '../../public/images/475563222_18483407191023500_1833185274346487540_n.jpg';
 import meeting from '../../public/images/526597981_18518407303023500_453408748168898313_n.jpg';
+import businessPhoto from '../../public/images/dream-clean-group.jpg';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
 
@@ -125,11 +126,18 @@ const reading = [
         </div>
         <div class="story-passages section-shell">
           <article class="story-passage" id="business-story" aria-labelledby="business-heading">
-            <h3 id="business-heading">How my business started</h3>
+            <div class="story-visual">
+              <h3 id="business-heading">How my business started</h3>
+              <figure class="business-photo">
+                <Image src={businessPhoto} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1400px) 36vw, 460px" width={720} format="webp" alt="Three people in blue and black work uniforms, with a Dream Clean flyer." loading="lazy" />
+                <figcaption>Dream Clean Housekeeping Company.</figcaption>
+              </figure>
+            </div>
             <div class="story-copy">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-              <a class="text-link" href="https://www.facebook.com/p/Dream-Clean-Housekeeping-Company-LLC-61550656630177" target="_blank" rel="noopener noreferrer">Visit Dream Clean <Arrow /></a>
+              <p>My dad was kind, funny, and always there for me. He loved people unconditionally and never hesitated to tell them. In January 2023, he died by suicide. I miss him deeply, and the love he modeled continues to shape how I care for others.</p>
+              <p>After his death, I had to care for my sibling and my young children. Between childcare and my family’s other needs, a traditional job wasn’t possible. I started Dream Clean Housekeeping Company in June 2023 to earn a living with the flexibility my family needed.</p>
+              <p>That experience is why supporting mothers, families, mental health, and small businesses matters so much to me. I know what it means to balance caring for the people you love with making a living. My business grew out of those responsibilities, and they continue to shape what I stand for.</p>
+              <a class="text-link" href="https://www.dreamcleanmacon.com/" target="_blank" rel="noopener noreferrer">Visit Dream Clean <Arrow /></a>
             </div>
           </article>
           <article class="story-passage" id="politics-story" aria-labelledby="politics-heading">
