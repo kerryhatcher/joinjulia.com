@@ -38,7 +38,7 @@ jobs:
       - name: Build Astro site
         run: bun run build
         env:
-          SITE_URL: ${{ github.event_name == 'pull_request' && format('https://pr-{0}.joinjulia.pages.dev', github.event.pull_request.number) || 'https://joinjulia.com' }}
+          SITE_URL: ${{ github.event_name == 'pull_request' && format('https://pr-{0}.joinjulia.pages.dev', github.event.pull_request.number) || 'https://www.joinjulia.com' }}
           BASE_PATH: /
 
       - name: Prevent preview indexing
@@ -115,6 +115,6 @@ jobs:
       - name: Record deployment URLs
         env:
           DEPLOYMENT_URL: ${{ steps.deployment.outputs.deployment-url }}
-          SITE_URL: ${{ github.event_name == 'pull_request' && format('https://pr-{0}.joinjulia.pages.dev', github.event.pull_request.number) || 'https://joinjulia.com' }}
+          SITE_URL: ${{ github.event_name == 'pull_request' && format('https://pr-{0}.joinjulia.pages.dev', github.event.pull_request.number) || 'https://www.joinjulia.com' }}
         run: |
           printf 'Site: %s\n\nDeployment: %s\n' "$SITE_URL" "$DEPLOYMENT_URL" >> "$GITHUB_STEP_SUMMARY"

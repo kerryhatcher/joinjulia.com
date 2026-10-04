@@ -20,13 +20,13 @@ bun run build
 bun run preview
 ```
 
-Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages. Use `bun install --frozen-lockfile && bun run build` as the build command and `dist` as the output directory. Local builds default to `https://joinjulia.com/`; `SITE_URL` and `BASE_PATH` can override the origin and deployment path.
+Deploy the contents of `dist/` to any static host, including S3, Cloudflare Pages, or GitHub Pages. Use `bun install --frozen-lockfile && bun run build` as the build command and `dist` as the output directory. Local builds default to `https://www.joinjulia.com/`; `SITE_URL` and `BASE_PATH` can override the origin and deployment path.
 
 ## Cloudflare Pages
 
-The `joinjulia` Direct Upload project lives in the **Julia Callahan** Cloudflare account (`e33f99b627bf3afdbc0311ed464a1e42`). Its production branch is `main`, output directory is `dist/`, and production domain is **https://joinjulia.com**. `wrangler.jsonc` records the local deployment configuration. No Astro server adapter or Pages Functions are needed.
+The `joinjulia` Direct Upload project lives in the **Julia Callahan** Cloudflare account (`e33f99b627bf3afdbc0311ed464a1e42`). Its production branch is `main`, output directory is `dist/`, and production domain is **https://www.joinjulia.com**. `wrangler.jsonc` records the local deployment configuration. No Astro server adapter or Pages Functions are needed.
 
-`.github/workflows/deploy.yml` installs dependencies with Bun's frozen lockfile, builds the static site, and uploads `dist/` to Cloudflare using `cloudflare/wrangler-action`. Pushes to `main` deploy production. Manual runs deploy only when run against `main`. Builds use `/` as the base path and `https://joinjulia.com` as the production origin.
+`.github/workflows/deploy.yml` installs dependencies with Bun's frozen lockfile, builds the static site, and uploads `dist/` to Cloudflare using `cloudflare/wrangler-action`. Pushes to `main` deploy production. Manual runs deploy only when run against `main`. Builds use `/` as the base path and `https://www.joinjulia.com` as the production origin.
 
 ### Repository credentials
 
@@ -47,7 +47,7 @@ Preview builds use their preview origin for canonical metadata, disallow crawler
 
 ### Domain and deployment
 
-`joinjulia.com` is attached to the Pages project, with a proxied apex CNAME pointing at `joinjulia.pages.dev`. Cloudflare handles HTTPS and apex CNAME flattening. The first successful production deployment is required before the site is served, and certificate/domain activation can take time. GitHub Pages settings are no longer used by this workflow.
+`www.joinjulia.com` and `joinjulia.com` are attached to the Pages project, with proxied CNAME records pointing at `joinjulia.pages.dev`. A Cloudflare Single Redirect rule permanently redirects all requests for `joinjulia.com` to `https://www.joinjulia.com`, preserving the path and query string. Cloudflare handles HTTPS and apex CNAME flattening. The first successful production deployment is required before the site is served, and certificate/domain activation can take time. GitHub Pages settings are no longer used by this workflow.
 
 For an authenticated local production deployment:
 
