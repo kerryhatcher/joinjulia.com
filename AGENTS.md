@@ -40,3 +40,14 @@ https://georgiarecorder.com/author/juliacallhan/
 Tech Notes:
 
 This should be a static astro site to be hosted on something like s3/cloudflare/github pages. https://astro.build/
+
+Implementation and verification:
+
+- Use Bun 1.3.14 and Node.js 24 in CI. Install with `bun install --frozen-lockfile`; build with `bun run build`.
+- The canonical production origin is `https://www.joinjulia.com`. Pull-request builds use `SITE_URL` for their own origin; derive metadata and discovery URLs from `Astro.site`.
+- Hosting is Cloudflare Pages Direct Upload, driven by `.github/workflows/deploy.yml`. Keep the generated top-level `dist/404.html` so missing routes return HTTP 404 rather than the homepage.
+- Keep production crawlable. Public previews use `X-Robots-Tag: noindex, nofollow` and allow crawling so crawlers can read the header. Never include 404 pages in the sitemap.
+- Use only approved, verified campaign facts in visible copy, JSON-LD, and social metadata. Do not invent policies, election dates, endorsements, credentials, or a likeness of Julia. The story placeholders require approved replacement copy.
+- Keep this file in the repository; do not publish it as a website discovery file. An optional future `llms.txt` must mirror approved public content and must not promise ranking improvements.
+- For discovery changes, run the Bun build, `git diff --check`, and `actionlint` when workflows change. Inspect the generated sitemap, robots.txt, canonical metadata, and JSON-LD, then verify the PR preview's HTTP responses and indexing headers.
+- The sharing image is reproducible with `python3 scripts/render-social-card.py` (Pillow required). Keep its metadata dimensions and text consistent with the generated image.
