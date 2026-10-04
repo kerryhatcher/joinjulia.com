@@ -4,6 +4,7 @@ import '@fontsource/barlow/latin-400.css';
 import '@fontsource/barlow/latin-600.css';
 import '@fontsource/barlow/latin-700.css';
 import Arrow from '../components/Arrow.astro';
+import ContactForm from '../components/ContactForm.astro';
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const canonicalUrl = new URL(base, Astro.site);
@@ -146,13 +147,14 @@ const reading = [
       <section class="campaign-close" aria-labelledby="close-heading">
         <div class="close-layout section-shell">
           <h2 id="close-heading">It’s time to<br />make things happen.</h2>
-          <div class="close-copy"><p>It’s time for a change. Let’s put Democrats on offense, right here in Bibb County.</p><a class="primary-action" href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Connect with Julia <Arrow /></a></div>
+          <div class="close-copy"><p>It’s time for a change. Let’s put Democrats on offense, right here in Bibb County.</p><a class="primary-action" href="#contact">Connect with Julia <Arrow /></a></div>
         </div>
       </section>
+      <ContactForm />
     </main>
     <footer class="site-footer section-shell">
       <div><a class="wordmark" href={base}>joinjulia.com</a><p>Julia Adele Callahan<br />For Bibb County Democratic Party Chair<br />Macon, Georgia</p></div>
-      <nav aria-label="Social links"><a href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Facebook <Arrow /></a><a href="https://www.instagram.com/jaythaqueen/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://www.threads.com/@jaythaqueen" target="_blank" rel="noopener noreferrer">Threads <Arrow /></a></nav>
+      <nav aria-label="Contact and social links"><a href="#contact">Contact Julia <Arrow /></a><a href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Facebook <Arrow /></a><a href="https://www.instagram.com/jaythaqueen/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://www.threads.com/@jaythaqueen" target="_blank" rel="noopener noreferrer">Threads <Arrow /></a></nav>
       <a class="back-top" href="#main">Back to the playbook <Arrow /></a>
     </footer>
   </body>

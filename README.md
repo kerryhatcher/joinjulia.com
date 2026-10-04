@@ -2,7 +2,7 @@
 
 Julia Adele Callahan's campaign homepage: **Democrats on offense**.
 
-Static Astro, self-hosted fonts, and an original football playbook graphic. The page has no client-side application framework, tracking, signup service, or server requirement. Native expandable priority rows work with JavaScript disabled.
+Static Astro, self-hosted fonts, and an original football playbook graphic. The page has no client-side application framework, tracking, or server requirement. Native expandable priority rows work with JavaScript disabled.
 
 ## Development
 
@@ -66,6 +66,12 @@ The homepage includes descriptive title and sharing metadata, `WebSite` and `Per
 After merging, submit `https://www.joinjulia.com/sitemap-index.xml` in Google Search Console and inspect the homepage's indexing and canonical URL. Approved biography and policy copy is still required. Repository `AGENTS.md` guides coding agents and is not published; `llms.txt` is deferred until substantive approved content is available. These files do not promise ranking improvements.
 
 The production `joinjulia.pages.dev` hostname still needs a Cloudflare Bulk Redirect to the www domain. This is account configuration rather than a Pages `_redirects` rule (domain-level redirects are unsupported there). Scope that redirect to the exact production hostname so PR preview subdomains remain available. This branch does not change live production account rules.
+
+## Contact form
+
+`src/components/ContactForm.astro` uses the Basic HTML Formspree integration: a native POST to `https://formspree.io/f/xnpnekbv`. Name, email, and message have visible labels and browser validation; the hidden `_gotcha` field provides Formspree's honeypot filtering. The form works with JavaScript disabled and needs no framework, server function, API key, or extra dependency.
+
+The campaign closing link and footer link lead to `#contact`. Formspree handles delivery, spam checks, errors, and the confirmation page. Verify the form's recipient and notification settings in the Formspree dashboard. Changing the endpoint only requires editing the form's `action`.
 
 ## Content
 
