@@ -85,6 +85,9 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Install deployment tooling
+        run: bun install --frozen-lockfile
+
       - name: Download site artifact
         uses: actions/download-artifact@v4
         with:

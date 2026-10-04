@@ -52,7 +52,7 @@ Preview builds use their preview origin for canonical metadata, disallow crawler
 For an authenticated local production deployment:
 
 ```sh
-bun run deploy
+CLOUDFLARE_ACCOUNT_ID=e33f99b627bf3afdbc0311ed464a1e42 bun run deploy
 ```
 
 Use `bunx wrangler login` first, or provide `CLOUDFLARE_API_TOKEN` through your shell's secure credential mechanism. See [Cloudflare's Direct Upload CI guide](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/) and [Pages custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
