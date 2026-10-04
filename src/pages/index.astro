@@ -3,6 +3,10 @@ import '../styles/global.css';
 import '@fontsource/barlow/latin-400.css';
 import '@fontsource/barlow/latin-600.css';
 import '@fontsource/barlow/latin-700.css';
+import { Image } from 'astro:assets';
+import headshot from '../../public/images/headshot.jpg';
+import speaking from '../../public/images/475563222_18483407191023500_1833185274346487540_n.jpg';
+import meeting from '../../public/images/526597981_18518407303023500_453408748168898313_n.jpg';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
 
@@ -96,7 +100,10 @@ const reading = [
             <p class="candidate-office">For Bibb County Democratic Party Chair</p>
             <a class="primary-action" href="#priorities">Explore the priorities <Arrow /></a>
           </div>
-          <img class="play-diagram" src={`${base}images/offensive-playbook.webp`} width="1469" height="1071" alt="" fetchpriority="high" decoding="async" />
+          <div class="hero-media">
+            <img class="play-diagram" src={`${base}images/offensive-playbook.webp`} width="1469" height="1071" alt="" decoding="async" />
+            <Image class="hero-portrait" src={headshot} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1100px) 36vw, 440px" width={960} height={960} format="webp" quality={85} alt="Julia Adele Callahan smiling in a black blazer against a dark background." loading="eager" fetchpriority="high" />
+          </div>
         </div>
       </section>
       <section class="playbook section-shell" id="priorities" aria-labelledby="playbook-heading">
@@ -126,11 +133,21 @@ const reading = [
             </div>
           </article>
           <article class="story-passage" id="politics-story" aria-labelledby="politics-heading">
-            <h3 id="politics-heading">My journey into politics</h3>
+            <div class="story-visual">
+              <h3 id="politics-heading">My journey into politics</h3>
+              <figure class="speaking-photo">
+                <Image src={speaking} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} height={900} format="webp" alt="A woman speaks at a microphone, with two women behind her and a blue reproductive-freedom backdrop." loading="lazy" />
+                <figcaption>Speaking at a lectern marked “Fighting for Reproductive Freedom.”</figcaption>
+              </figure>
+            </div>
             <div class="story-copy">
               <p>When I was pregnant, I visited a center in Macon offering free ultrasounds. I thought I was getting medical care. Instead, staff told me something was wrong with my baby’s kidneys, information my OB-GYN later confirmed was incorrect. What I had walked into was a crisis pregnancy center, or “fake clinic.” I left frightened about a problem that wasn’t there.</p>
               <p>That experience pushed me into political action. I began speaking out about fake clinics and the barriers families face when seeking reproductive health care. As a cofounder of Middle Georgia 4 Choice, I’ve shared my story publicly, including at Georgia’s State Capitol. Families deserve accurate information, trustworthy care, and leaders who listen when something goes wrong.</p>
               <a class="text-link" href="https://msmagazine.com/author/jcallahan/" target="_blank" rel="noopener noreferrer">Read Julia’s writing <Arrow /></a>
+              <figure class="meeting-photo">
+                <Image src={meeting} widths={[480, 720, 1000, 1290]} sizes="(max-width: 760px) calc(100vw - 40px), 48vw" width={1290} height={1720} format="webp" alt="A woman gestures during a discussion with Sen. Raphael Warnock, seated at left beneath the Georgia state seal." loading="lazy" />
+                <figcaption>A discussion with Sen. Raphael Warnock.</figcaption>
+              </figure>
             </div>
           </article>
         </div>
