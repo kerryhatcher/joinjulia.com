@@ -7,6 +7,37 @@ import Arrow from '../components/Arrow.astro';
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const canonicalUrl = new URL(base, Astro.site);
+const title = 'Julia Adele Callahan — Bibb County Democratic Party Chair Candidate';
+const description = 'Meet Julia Adele Callahan, candidate for Bibb County Democratic Party Chair in Macon, Georgia. Explore her story, priorities, and writing. Democrats on offense.';
+const socialImage = new URL(`${base}images/social-card.png`, Astro.site);
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': `${canonicalUrl.href}#website`,
+      url: canonicalUrl.href,
+      name: 'Join Julia',
+      alternateName: 'Julia Adele Callahan',
+      inLanguage: 'en-US',
+      about: { '@id': `${canonicalUrl.href}#julia` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${canonicalUrl.href}#julia`,
+      name: 'Julia Adele Callahan',
+      url: canonicalUrl.href,
+      description: 'Candidate for Bibb County Democratic Party Chair in Macon, Georgia.',
+      sameAs: [
+        'https://www.facebook.com/JuliaAdeleCallahan/',
+        'https://www.instagram.com/jaythaqueen/',
+        'https://www.threads.com/@jaythaqueen',
+        'https://msmagazine.com/author/jcallahan/',
+        'https://georgiarecorder.com/author/juliacallhan/',
+      ],
+    },
+  ],
+};
 
 const priorities = [
   { title: 'Jail & public safety reform', id: 'public-safety' },
@@ -25,16 +56,30 @@ const reading = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Meet Julia Adele Callahan, candidate for Bibb County Democratic Party Chair in Macon, Georgia. Democrats on offense. It's time to make things happen." />
+    <meta name="description" content={description} />
     <meta name="theme-color" content="#103ca6" />
-    <meta property="og:title" content="Julia Adele Callahan | Democrats on offense" />
-    <meta property="og:description" content="For Bibb County Democratic Party Chair. Meet Julia, explore the playbook, and connect." />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Join Julia" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={socialImage.href} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Julia Adele Callahan. Democrats on offense. For Bibb County Democratic Party Chair in Macon, Georgia." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage.href} />
+    <meta name="twitter:image:alt" content="Julia Adele Callahan. Democrats on offense. For Bibb County Democratic Party Chair in Macon, Georgia." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl.href} />
     <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="sitemap" href={`${base}sitemap-index.xml`} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="preload" href={`${base}fonts/julia-playbook.otf`} as="font" type="font/otf" crossorigin />
-    <title>Julia Adele Callahan | Democrats on offense</title>
+    <title>{title}</title>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -46,8 +91,7 @@ const reading = [
       <section class="hero" aria-labelledby="campaign-heading">
         <div class="hero-layout">
           <div class="hero-copy">
-            <h1 id="campaign-heading"><span>Democrats</span><span>on offense</span></h1>
-            <p class="candidate-name">Julia Adele Callahan</p>
+            <h1 id="campaign-heading"><span>Democrats</span><span>on offense</span><span class="candidate-name">Julia Adele Callahan</span></h1>
             <p class="candidate-office">For Bibb County Democratic Party Chair</p>
             <a class="primary-action" href="#priorities">Explore the priorities <Arrow /></a>
           </div>

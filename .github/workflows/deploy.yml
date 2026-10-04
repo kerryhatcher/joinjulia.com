@@ -44,7 +44,7 @@ jobs:
       - name: Prevent preview indexing
         if: github.event_name == 'pull_request'
         run: |
-          printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          printf 'User-agent: *\nAllow: /\n' > dist/robots.txt
           printf '/*\n  X-Robots-Tag: noindex, nofollow\n' >> dist/_headers
 
       - name: Upload site artifact

@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import '@fontsource/barlow/latin-400.css';
+import '@fontsource/barlow/latin-700.css';
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <meta name="theme-color" content="#103ca6" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <title>Page not found | Join Julia</title>
+  </head>
+  <body>
+    <header class="site-header"><a class="wordmark" href={base}>Join Julia</a></header>
+    <main class="section-shell">
+      <p>404 · Page not found</p>
+      <h1>This play isn’t<br />in the book.</h1>
+      <p>The page you’re looking for may have moved, or the address may be incorrect.</p>
+      <a class="primary-action" href={base}>Back to the homepage</a>
+    </main>
+  </body>
+</html>
+<style>
+  main { padding-block: clamp(48px, 10vw, 120px); }
+  h1 { font-size: clamp(42px, 8vw, 96px); margin-block: 24px; }
+  p { max-width: 52ch; }
+  .primary-action { min-width: 0; }
+</style>

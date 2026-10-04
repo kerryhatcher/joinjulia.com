@@ -43,7 +43,7 @@ The account variable and deployment secret are configured. For credential rotati
 
 Opening, reopening, or updating a pull request from this repository builds and deploys a preview using the Pages branch `pr-<number>`. Its stable address is `https://pr-<number>.joinjulia.pages.dev`; later commits update that address without changing production. Each deployment also has an immutable URL, available in the Actions job summary and its GitHub environment (`preview-pr-<number>`).
 
-Preview builds use their preview origin for canonical metadata, disallow crawlers in `robots.txt`, and return `X-Robots-Tag: noindex, nofollow`. Previews are public. Fork pull requests run the build but skip deployment because they cannot access the Cloudflare secret. Preview deployments remain available after a pull request closes; remove old deployments through Cloudflare Pages when no longer needed.
+Preview builds use their preview origin for canonical metadata, allow crawlers in `robots.txt` so they can read `X-Robots-Tag: noindex, nofollow`, and omit sitemap discovery from the preview robots file. Previews are public. Fork pull requests run the build but skip deployment because they cannot access the Cloudflare secret. Preview deployments remain available after a pull request closes; remove old deployments through Cloudflare Pages when no longer needed.
 
 ### Domain and deployment
 
@@ -56,6 +56,16 @@ CLOUDFLARE_ACCOUNT_ID=e33f99b627bf3afdbc0311ed464a1e42 bun run deploy
 ```
 
 Use `bunx wrangler login` first, or provide `CLOUDFLARE_API_TOKEN` through your shell's secure credential mechanism. See [Cloudflare's Direct Upload CI guide](https://developers.cloudflare.com/pages/how-to/use-direct-upload-with-continuous-integration/) and [Pages custom domains](https://developers.cloudflare.com/pages/configuration/custom-domains/).
+
+## Search discovery and sharing
+
+Astro's sitemap integration generates `sitemap-index.xml` and `sitemap-0.xml` using `Astro.site`; the 404 page is excluded. `src/pages/robots.txt.ts` generates a static, crawlable production robots file with the sitemap URL. The top-level `404.html` generated from `src/pages/404.astro` makes Cloudflare Pages return real 404 responses instead of its default homepage fallback.
+
+The homepage includes descriptive title and sharing metadata, `WebSite` and `Person` JSON-LD using the existing verified profile links, and a 1200 × 630 PNG sharing card. Regenerate the card with `python3 scripts/render-social-card.py` (Pillow required); this is an optional asset-authoring step, not a build dependency. Its text uses the site's licensed Julia Playbook font.
+
+After merging, submit `https://www.joinjulia.com/sitemap-index.xml` in Google Search Console and inspect the homepage's indexing and canonical URL. Approved biography and policy copy is still required. Repository `AGENTS.md` guides coding agents and is not published; `llms.txt` is deferred until substantive approved content is available. These files do not promise ranking improvements.
+
+The production `joinjulia.pages.dev` hostname still needs a Cloudflare Bulk Redirect to the www domain. This is account configuration rather than a Pages `_redirects` rule (domain-level redirects are unsupported there). Scope that redirect to the exact production hostname so PR preview subdomains remain available. This branch does not change live production account rules.
 
 ## Content
 
