@@ -4,12 +4,12 @@ import { Image } from 'astro:assets';
 import communityPhoto from '../../public/images/474207452_18481024870023500_7589148821166039254_n.jpg';
 ---
 <section class="contact section-shell" id="contact" aria-labelledby="contact-heading">
-  <div class="contact-intro">
-    <h2 id="contact-heading">Connect with Julia</h2>
-    <p>Have a question or something to share? Send Julia a message.</p>
-    <figure class="contact-photo"><Image src={communityPhoto} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} format="webp" alt="Four people standing in front of a blue portrait mural." loading="lazy" /></figure>
-  </div>
+  <figure class="contact-photo"><Image src={communityPhoto} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} format="webp" alt="Four people standing in front of a blue portrait mural." loading="lazy" /></figure>
   <form action="https://formspree.io/f/xnpnekbv" method="POST" aria-labelledby="contact-heading" aria-describedby="contact-help">
+    <div class="contact-intro">
+      <h2 id="contact-heading">Connect with Julia</h2>
+      <p>Have a question or something to share? Send Julia a message.</p>
+    </div>
     <p class="form-help" id="contact-help">All fields are required.</p>
     <div class="contact-fields">
       <div class="field">
