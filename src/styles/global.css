@@ -232,8 +232,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3vw, 
 
 /* Contact form and its supporting photograph. */
 
-  .contact .contact-photo { margin-top: 0; width: 85%; align-self: start; }
-  .contact .contact-photo img { display: block; width: 100%; height: auto; border-bottom: 8px solid var(--lime); }
+  .contact .contact-photo { margin-top: 0; width: 85%; align-self: stretch; position: relative; }
+  .contact .contact-photo img { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; border-bottom: 8px solid var(--lime); }
   .contact { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; padding-block: 72px 80px; border-top: 1px solid var(--border-soft); }
   .contact .contact-intro { margin-bottom: 28px; }
   .contact .contact-intro h2 { max-width: none; }
@@ -251,7 +251,8 @@ h3 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3vw, 
   .contact .form-note { margin-top: 18px; max-width: 60ch; }
   .contact .honeypot { display: none; }
   @media (max-width: 760px) {
-  .contact .contact-photo { max-width: 360px; order: 1; }
+  .contact .contact-photo { max-width: 360px; order: 1; position: static; }
+  .contact .contact-photo img { position: static; height: auto; }
   .contact { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 48px; }
   .contact .contact-intro h2 { font-size: 32px; max-width: none; }
   .contact .contact-intro p { font-size: 18px; margin-top: 16px; }
