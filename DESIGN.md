@@ -54,6 +54,86 @@ typography:
     fontSize: "17px"
     fontWeight: 600
     lineHeight: 1.4
+  display-mobile:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "clamp(56px, 16vw, 105px)"
+    fontWeight: 700
+    lineHeight: 0.95
+  candidate-mobile:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "clamp(25px, 6.7vw, 45px)"
+    fontWeight: 700
+    lineHeight: 0.87
+  office:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "clamp(18px, 2.1vw, 32px)"
+    fontWeight: 600
+    lineHeight: 1.35
+  close-headline:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "clamp(34px, 4.3vw, 64px)"
+    fontWeight: 700
+    lineHeight: 1.1
+  close-headline-mobile:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "clamp(32px, 8vw, 54px)"
+    fontWeight: 700
+    lineHeight: 1.1
+  play-number:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "62px"
+    fontWeight: 700
+    lineHeight: 1
+  play-number-mobile:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "42px"
+    fontWeight: 700
+    lineHeight: 1
+  story-index-mobile:
+    fontFamily: "'Julia Playbook', sans-serif"
+    fontSize: "29px"
+    fontWeight: 700
+    lineHeight: 1.07
+  navigation:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "22px"
+    fontWeight: 700
+    lineHeight: 1.6
+  navigation-small:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "15px"
+    fontWeight: 700
+    lineHeight: 1.6
+  wordmark-mobile:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "23px"
+    fontWeight: 700
+    lineHeight: 1.6
+  action-mobile:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "21px"
+    fontWeight: 700
+    lineHeight: 1.2
+  action-small:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "19px"
+    fontWeight: 700
+    lineHeight: 1.2
+  close-copy:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "24px"
+    fontWeight: 400
+    lineHeight: 1.5
+  reading-title:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "25px"
+    fontWeight: 600
+    lineHeight: 1.35
+  caption:
+    fontFamily: "'Barlow', sans-serif"
+    fontSize: "16px"
+    fontWeight: 400
+    lineHeight: 1.5
 rounded:
   square: "0px"
 spacing:
@@ -78,8 +158,8 @@ components:
     textColor: "{colors.navy}"
     typography: "{typography.priority-title}"
   story-strip:
-    backgroundColor: "{colors.pale}"
-    textColor: "{colors.navy}"
+    backgroundColor: "{colors.blue}"
+    textColor: "{colors.white}"
   publication-label:
     textColor: "{colors.navy}"
     typography: "{typography.publication}"
@@ -93,7 +173,7 @@ components:
 
 A civic offensive playbook carries the user-confirmed football theme through angular athletic lettering, advancing route marks, numbered plays, and decisive lime actions. Royal blue establishes the campaign's voice; open white and pale reading surfaces let longer stories breathe.
 
-The visual system is direct and flat. Rules organize content into continuous passages rather than floating cards. Display lettering supplies energy while Barlow keeps navigation, controls, and prose readable. The selected homepage composition remains in `.impeccable/surfaces/src-pages-index-astro.md`; this document records the reusable implementation.
+The visual system is direct and flat. Rules organize content into continuous passages rather than floating cards. Display lettering supplies energy while Barlow keeps navigation, controls, and prose readable. The selected homepage composition remains in `.impeccable/surfaces/src-pages-index-astro.md`; the political story extension is recorded in `.impeccable/surfaces/src-pages-my-journey-into-politics-astro.md`. This document records the reusable implementation.
 
 **Key Characteristics:**
 
@@ -145,7 +225,7 @@ Julia Playbook is a renamed sharp-corner derivative of Jamie Wilson's Norwester.
 
 Centered shells stop at 1680px and use the fluid gutter token. Desktop layouts use unequal columns: hero `1fr .94fr` with a 5% gap, story passages `1fr 1.25fr` with a 9% gap, and campaign close `1.25fr 1fr` with a 9% gap. Content is continuous across each band; individual rows have separators instead of card enclosures.
 
-At 1100px and below, issue columns and gaps tighten and actions become narrower. At 760px and below, hero, stories, publication links, and campaign close stack into one column. The diagram stays contained, capped at 520px wide and 240px high on mobile. The story index becomes a vertical list; publication names sit above their titles. The footer uses two columns with a separate back-to-top row. At 360px and below, type and issue-column widths reduce again. Above 1680px, the header aligns to the centered content.
+At 1100px and below, issue columns and gaps tighten and actions become narrower. At 760px and below, hero, stories, publication links, and campaign close stack into one column. The diagram stays contained, capped at 520px wide with its natural aspect ratio on mobile. The story index keeps the portrait beside a vertical list of links; publication names sit above their titles. The footer uses two columns with a separate back-to-top row. At 360px and below, type and issue-column widths reduce again. Above 1680px, the header aligns to the centered content.
 
 Issue summaries use desktop columns of `130px 1fr 28px`, a 46px gap, and a 73px minimum height; mobile uses `64px 1fr 24px`, an 18px gap, and an 86px minimum height. Reading sections use more vertical space than the compact playbook. Reused spacing values are recorded in the frontmatter; component-specific measurements stay in the stylesheet.
 
@@ -169,15 +249,21 @@ Keyboard focus uses a 3px outline with a 5px offset, blue on light surfaces and 
 
 ### Navigation
 
-The compact white header pairs a bold Barlow domain wordmark with two sentence-case links. Links underline on hover; mobile retains the visible links and gives them a 44px minimum touch height. Footer social links follow the same type family and inline-arrow language. A focus-revealed skip link precedes navigation.
+The compact white header pairs a bold Barlow domain wordmark with two sentence-case links. Links underline on hover; wordmarks, navigation, footer links, and inline reading links have a 44px minimum touch height at every breakpoint. Footer social links follow the same type family and inline-arrow language. A focus-revealed skip link precedes navigation.
 
 ### Numbered priority disclosures
 
 Native `details` and `summary` form an exclusive group named `playbook`. Large blue two-digit numbers, navy issue titles, vertical number rules, and a right arrow create the repeated signature. The open arrow rotates 90 degrees; hover changes the title to blue. The expanded reading panel aligns with the title column and works without client JavaScript.
 
+The section states upfront that full priority statements are forthcoming. The hero action points to Julia’s story while priority statements remain unfinished. These are current content states, not permanent design rules.
+
 ### Story strips and passages
 
-The pale story surface holds a heading and two directional anchor links, then open two-column passages with soft separators. On mobile, links become full-width rows and headings sit above their prose. The current business and political stories contain explicitly permitted lorem ipsum; their eventual copy must preserve readable measure and natural document flow.
+The blue story index holds a portrait, heading, and two directional anchor links above pale two-column passages with soft separators. On mobile, the links stack beside the portrait and passage headings sit above their prose. Story text preserves readable measure and natural document flow; design documentation does not establish approval of campaign facts.
+
+### Political story page
+
+`/my-journey-into-politics/` extends the same identity with a royal-blue title band, the homepage play diagram beside the title, and a white reading surface. Its route-local heading uses `clamp(44px, 6vw, 96px)` at 1.05 line height, becoming `clamp(36px, 8vw, 56px)` on mobile. A three-column section index sits above paired chapters within a 1440px shell. Each pale chapter has 32px inset padding, a 42% photo column and 48px column gap. Photos alternate left, right, then left. At 760px and below, the index and chapters stack, keeping prose before each photo. Prose retains the 65ch measure and story-body scale. The account of denied care begins the narrative, followed by party rebuilding and the next generation. The homepage presents a shorter political teaser linking to this full account before the business story.
 
 ### Reading links
 
@@ -185,7 +271,7 @@ Publication labels, larger article descriptions, and inline arrows form ruled ex
 
 ### Football graphic
 
-`public/images/offensive-playbook.webp` is a generated transparent route illustration derived from the selected Playbook reference, with prompt provenance alongside it. It is decorative, rendered with empty alt text, intrinsic dimensions, and contained scaling. Its field marks remain on the blue surface. The concept screenshot itself is not a shipping page asset.
+`public/images/offensive-playbook.webp` is a generated transparent route illustration derived from the selected Playbook reference, with prompt provenance alongside it. It is decorative, rendered with empty alt text, intrinsic dimensions, and contained scaling. Astro generates 360, 540, 720, 1080, and 1469px WebP variants at quality 85; responsive sizes follow the mobile width cap and desktop column. The hero graphic loads eagerly. Its field marks remain on the blue surface. The concept screenshot itself is not a shipping page asset.
 
 ## Do's and Don'ts
 
@@ -208,6 +294,8 @@ Not canonized: lorem ipsum and forthcoming statements are content gaps, not reus
 
 ## Homepage photography
 
-User-supplied photographs now anchor the campaign: the square headshot is the primary hero portrait, with a restrained route diagram behind it and an 8px lime baseline. The politics passage pairs a vertical speaking photograph in its heading column with a landscape discussion photograph below the prose. Mobile stacks these elements in reading order. Frames stay square-edged, without shadows or masks.
+User-supplied photographs now anchor the campaign: the square headshot introduces My story in a compact royal blue band, beside a white heading and two lime-ruled story links, with an 8px lime baseline. The portrait is 160px wide on desktop and 96px on mobile. The unobstructed route diagram leads the hero’s visual column at full opacity. The homepage politics teaser keeps a vertical speaking photograph in its heading column. The landscape discussion photograph with Sen. Raphael Warnock appears below the party-rebuilding prose on the political story page. Mobile keeps the compact portrait beside the story heading and stacked links, and stacks passage photographs in reading order. Frames stay square-edged, without shadows or masks.
 
-Astro generates responsive WebP sources from the original uploads. The headshot loads eagerly with high priority; story photographs load lazily. Intrinsic dimensions and explicit aspect ratios reserve space. The discussion image uses a 3:2 crop at vertical position 37.5% to remove its embedded white bands. Caption text uses Barlow at 16px with 1.5 line height, matching the existing footer’s small reading scale. Captions describe observed scenes and leave unverified event details out. Source filenames, review notes, and fingerprints are recorded in IMAGE_INDEX.md.
+Astro generates responsive WebP sources from the original uploads. The headshot and story photographs load lazily. Intrinsic dimensions and explicit aspect ratios reserve space. The discussion image uses a 3:2 crop at vertical position 37.5% to remove its embedded white bands. Caption text uses Barlow at 16px with 1.5 line height, matching the existing footer’s small reading scale. Captions describe observed scenes and leave unverified event details out. Source filenames, review notes, and fingerprints are recorded in IMAGE_INDEX.md.
+
+The contact introduction uses the uploaded four-person mural photograph beneath its copy, at 85% of the left column width with a 32px gap and an 8px lime baseline. The full square composition preserves all four people; responsive WebP derivatives load lazily. On mobile the introduction and photograph precede the form.

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-02T03:27:53Z",
+  "generatedAt": "2026-10-05T00:11:20.012544Z",
   "title": "Design System: Julia Adele Callahan",
   "extensions": {
     "colorMeta": {
@@ -135,6 +135,70 @@
       "publication": {
         "displayName": "Publication label",
         "purpose": "Semibold source names in reading rows."
+      },
+      "display-mobile": {
+        "displayName": "Display mobile",
+        "purpose": "Observed display mobile typography in the homepage stylesheet."
+      },
+      "candidate-mobile": {
+        "displayName": "Candidate mobile",
+        "purpose": "Observed candidate mobile typography in the homepage stylesheet."
+      },
+      "office": {
+        "displayName": "Office",
+        "purpose": "Observed office typography in the homepage stylesheet."
+      },
+      "close-headline": {
+        "displayName": "Close headline",
+        "purpose": "Observed close headline typography in the homepage stylesheet."
+      },
+      "close-headline-mobile": {
+        "displayName": "Close headline mobile",
+        "purpose": "Observed close headline mobile typography in the homepage stylesheet."
+      },
+      "play-number": {
+        "displayName": "Play number",
+        "purpose": "Observed play number typography in the homepage stylesheet."
+      },
+      "play-number-mobile": {
+        "displayName": "Play number mobile",
+        "purpose": "Observed play number mobile typography in the homepage stylesheet."
+      },
+      "story-index-mobile": {
+        "displayName": "Story index mobile",
+        "purpose": "Observed story index mobile typography in the homepage stylesheet."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Observed navigation typography in the homepage stylesheet."
+      },
+      "navigation-small": {
+        "displayName": "Navigation small",
+        "purpose": "Observed navigation small typography in the homepage stylesheet."
+      },
+      "wordmark-mobile": {
+        "displayName": "Wordmark mobile",
+        "purpose": "Observed wordmark mobile typography in the homepage stylesheet."
+      },
+      "action-mobile": {
+        "displayName": "Action mobile",
+        "purpose": "Observed action mobile typography in the homepage stylesheet."
+      },
+      "action-small": {
+        "displayName": "Action small",
+        "purpose": "Observed action small typography in the homepage stylesheet."
+      },
+      "close-copy": {
+        "displayName": "Close copy",
+        "purpose": "Observed close copy typography in the homepage stylesheet."
+      },
+      "reading-title": {
+        "displayName": "Reading title",
+        "purpose": "Observed reading title typography in the homepage stylesheet."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Observed caption typography in the homepage stylesheet."
       }
     },
     "shadows": [],
@@ -189,7 +253,7 @@
       "kind": "button",
       "refersTo": "button-primary",
       "description": "Square lime anchor for the main section or connection action.",
-      "html": "<a class=\"ds-primary\" href=\"#priorities\">Explore the priorities <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
+      "html": "<a class=\"ds-primary\" href=\"#my-story\">Read Julia’s story <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
       "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:space-between;gap:24px;padding:10px 30px;min-height:60px;min-width:380px;border:1px solid var(--border-action,#9db97e);border-radius:0;color:var(--navy,#102644);background:var(--lime,#ddf888);font-family:var(--body,'Barlow',sans-serif);font-size:28px;font-weight:700;line-height:1.2;text-decoration:none;transition:background 180ms ease}.ds-primary:hover{background:var(--white,#fff)}.ds-primary:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:1100px){.ds-primary{min-width:0;font-size:22px;padding-inline:22px}}@media(max-width:760px){.ds-primary{font-size:21px;min-height:56px}}@media(max-width:360px){.ds-primary{font-size:19px;padding-inline:16px;gap:16px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
     },
     {
@@ -197,7 +261,7 @@
       "kind": "nav",
       "description": "Visible domain wordmark and two sentence-case section links.",
       "html": "<div class=\"ds-header\"><a class=\"ds-wordmark\" href=\"/\">joinjulia.com</a><nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#my-story\">My story</a><a href=\"#priorities\">Priorities</a></nav></div>",
-      "css": ".ds-header{height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white,#fff);color:var(--navy,#102644);font-family:var(--body,'Barlow',sans-serif)}.ds-wordmark{font-size:28px;font-weight:700;letter-spacing:-.025em;text-decoration:none;color:inherit}.ds-nav{display:flex;gap:50px}.ds-nav a{font-size:22px;font-weight:700;text-decoration:none;color:inherit}.ds-nav a:hover{text-decoration:underline}.ds-wordmark:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:760px){.ds-header{height:64px;gap:16px}.ds-wordmark{font-size:23px}.ds-nav{gap:20px}.ds-nav a{font-size:17px;min-height:44px;display:flex;align-items:center}}@media(max-width:360px){.ds-nav{gap:12px}.ds-nav a{font-size:15px}.ds-wordmark{font-size:21px}}"
+      "css": ".ds-header{height:54px;display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--white,#fff);color:var(--navy,#102644);font-family:var(--body,'Barlow',sans-serif)}.ds-wordmark{display:inline-flex;align-items:center;min-height:44px;font-size:28px;font-weight:700;letter-spacing:-.025em;text-decoration:none;color:inherit}.ds-nav{display:flex;gap:50px}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:22px;font-weight:700;text-decoration:none;color:inherit}.ds-nav a:hover{text-decoration:underline}.ds-wordmark:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:760px){.ds-header{height:64px;gap:16px}.ds-wordmark{display:inline-flex;align-items:center;min-height:44px;font-size:23px}.ds-nav{gap:20px}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:17px;min-height:44px;display:flex;align-items:center}}@media(max-width:360px){.ds-nav{gap:12px}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:15px}.ds-wordmark{display:inline-flex;align-items:center;min-height:44px;font-size:21px}}"
     },
     {
       "name": "Numbered priority disclosure",
@@ -211,9 +275,9 @@
       "name": "Story index link",
       "kind": "custom",
       "refersTo": "story-strip",
-      "description": "Open pale story strip with a directional anchor and a structural divider.",
+      "description": "Lime-ruled story anchor on the blue portrait-and-navigation band.",
       "html": "<div class=\"ds-story-strip\"><a class=\"ds-story-link\" href=\"#business-story\">How my business started <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a></div>",
-      "css": ".ds-story-strip{background:var(--pale,#f2f6fc);color:var(--navy,#102644)}.ds-story-link{display:flex;align-items:center;justify-content:space-between;gap:16px;border-left:1px solid var(--navy,#102644);padding:16px 30px 16px 42px;font-family:var(--body,'Barlow',sans-serif);font-size:24px;font-weight:600;text-decoration:none;color:inherit;line-height:1.3}.ds-story-link:hover{text-decoration:underline}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(max-width:1100px){.ds-story-link{font-size:20px;padding-inline:24px 8px}}@media(max-width:760px){.ds-story-link{border-left:0;border-top:1px solid var(--border-soft,#bdcbe2);min-height:68px;padding:16px 0;font-size:21px}}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+      "css": ".ds-story-strip{background:var(--blue,#103ca6);color:var(--white,#fff);padding:20px}.ds-story-link{display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--lime,#ddf888);padding:20px 0;min-height:44px;font-family:var(--body,Barlow,sans-serif);font-size:22px;font-weight:600;line-height:1.3;color:inherit;text-decoration:none}.ds-story-link:hover{text-decoration:underline}.ds-story-link:focus-visible{outline:3px solid var(--lime,#ddf888);outline-offset:5px}.ds-arrow{flex:0 0 auto;width:28px;height:28px}@media(max-width:1100px){.ds-story-link{font-size:20px}}@media(max-width:760px){.ds-story-link{border-color:var(--border-soft,#bdcbe2);padding:12px 0;font-size:17px;gap:8px}.ds-arrow{width:20px;height:20px}}"
     },
     {
       "name": "Publication reading row",
@@ -228,12 +292,19 @@
       "kind": "custom",
       "description": "Underlined Barlow link for related reading inside a passage.",
       "html": "<a class=\"ds-text-link\" href=\"https://msmagazine.com/author/jcallahan/\" target=\"_blank\" rel=\"noopener noreferrer\">Read Julia’s writing <svg class=\"ds-arrow\" width=\"28\" height=\"28\" viewBox=\"0 0 28 28\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 14h19M15 6l8 8-8 8\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"square\" stroke-linejoin=\"miter\"/></svg></a>",
-      "css": ".ds-text-link{display:inline-flex;align-items:center;gap:12px;font-family:var(--body,'Barlow',sans-serif);font-size:18px;font-weight:600;line-height:1.6;color:var(--navy,#102644);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}.ds-text-link .ds-arrow{width:20px;height:20px}.ds-text-link:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+      "css": ".ds-text-link{min-height:44px;display:inline-flex;align-items:center;gap:12px;font-family:var(--body,'Barlow',sans-serif);font-size:18px;font-weight:600;line-height:1.6;color:var(--navy,#102644);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:5px}.ds-text-link .ds-arrow{width:20px;height:20px}.ds-text-link:hover .ds-arrow{transform:translateX(4px)}.ds-arrow{flex:0 0 auto;transition:transform 260ms var(--ease,cubic-bezier(.16,1,.3,1))}.ds-primary:focus-visible,.ds-nav a:focus-visible,.ds-priority summary:focus-visible,.ds-story-link:focus-visible,.ds-reading:focus-visible,.ds-text-link:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-arrow,.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "description": "Persistent bold label and a square navy-bordered input with visible keyboard focus.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-contact-name\">Your name</label><input id=\"ds-contact-name\" type=\"text\" name=\"name\" autocomplete=\"name\" maxlength=\"100\" required></div>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:8px;color:var(--navy,#102644);font-family:var(--body,Barlow,sans-serif);font-size:18px;line-height:1.6}.ds-field label{font-weight:700}.ds-field input{width:100%;box-sizing:border-box;min-height:52px;border:1px solid var(--navy,#102644);border-radius:0;background:var(--white,#fff);color:var(--navy,#102644);padding:12px 14px;font:inherit;line-height:1.5}.ds-field input:focus-visible{outline:3px solid var(--blue,#103ca6);outline-offset:5px}"
     }
   ],
   "narrative": {
     "northStar": "The Playbook",
-    "overview": "A civic offensive playbook carries the user-confirmed football theme through angular athletic lettering, advancing route marks, numbered plays, and decisive lime actions. Royal blue establishes the campaign's voice; open white and pale reading surfaces let longer stories breathe.\n\nThe visual system is direct and flat. Rules organize content into continuous passages rather than floating cards. Display lettering supplies energy while Barlow keeps navigation, controls, and prose readable. The selected homepage composition remains in `.impeccable/surfaces/src-pages-index-astro.md`; this document records the reusable implementation.",
+    "overview": "A civic offensive playbook carries the user-confirmed football theme through angular athletic lettering, advancing route marks, numbered plays, and decisive lime actions. Royal blue establishes the campaign's voice; open white and pale reading surfaces let longer stories breathe.\n\nThe visual system is direct and flat. Rules organize content into continuous passages rather than floating cards. Display lettering supplies energy while Barlow keeps navigation, controls, and prose readable. The selected homepage composition remains in `.impeccable/surfaces/src-pages-index-astro.md`; the political story extension is recorded in `.impeccable/surfaces/src-pages-my-journey-into-politics-astro.md`. This document records the reusable implementation.",
     "keyCharacteristics": [
       "Angular uppercase display lettering with readable sentence-case prose.",
       "Royal blue campaign bands, lime actions, and navy reading text.",

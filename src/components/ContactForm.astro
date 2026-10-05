@@ -1,12 +1,15 @@
 ---
 import Arrow from './Arrow.astro';
+import { Image } from 'astro:assets';
+import communityPhoto from '../../public/images/474207452_18481024870023500_7589148821166039254_n.jpg';
 ---
 <section class="contact section-shell" id="contact" aria-labelledby="contact-heading">
-  <div class="contact-intro">
-    <h2 id="contact-heading">Connect with Julia</h2>
-    <p>Have a question or something to share? Send Julia a message.</p>
-  </div>
+  <figure class="contact-photo"><Image src={communityPhoto} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} format="webp" alt="Four people standing in front of a blue portrait mural." loading="lazy" /></figure>
   <form action="https://formspree.io/f/xnpnekbv" method="POST" aria-labelledby="contact-heading" aria-describedby="contact-help">
+    <div class="contact-intro">
+      <h2 id="contact-heading">Connect with Julia</h2>
+      <p>Have a question or something to share? Send Julia a message.</p>
+    </div>
     <p class="form-help" id="contact-help">All fields are required.</p>
     <div class="contact-fields">
       <div class="field">
@@ -30,27 +33,3 @@ import Arrow from './Arrow.astro';
     <p class="form-note">After you send your message, Formspree will show a confirmation or any steps needed to complete your submission.</p>
   </form>
 </section>
-<style>
-  .contact { display: grid; grid-template-columns: 1fr 1.25fr; gap: 9%; padding-block: 72px 80px; border-top: 1px solid #bdcbe2; }
-  .contact-intro h2 { max-width: 14ch; }
-  .contact-intro p { max-width: 34ch; margin-top: 20px; font-size: 22px; }
-  form { min-width: 0; }
-  .form-help, .form-note { font-size: 16px; }
-  .form-help { margin-bottom: 20px; }
-  .contact-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .field { display: flex; flex-direction: column; gap: 8px; }
-  label { font-weight: 700; }
-  input, textarea { width: 100%; min-height: 52px; border: 1px solid var(--navy); border-radius: 0; background: var(--white); color: var(--navy); padding: 12px 14px; font: inherit; line-height: 1.5; }
-  textarea { resize: vertical; }
-  .message-field { margin-top: 24px; }
-  .primary-action { min-width: 0; margin-top: 24px; cursor: pointer; }
-  .form-note { margin-top: 18px; max-width: 60ch; }
-  .honeypot { display: none; }
-  @media (max-width: 760px) {
-    .contact { grid-template-columns: 1fr; gap: 28px; padding-block: 44px 48px; }
-    .contact-intro h2 { font-size: 32px; max-width: none; }
-    .contact-intro p { font-size: 18px; margin-top: 16px; }
-    .contact-fields { grid-template-columns: 1fr; gap: 20px; }
-    .message-field { margin-top: 20px; }
-  }
-</style>
