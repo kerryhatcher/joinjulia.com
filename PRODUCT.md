@@ -44,13 +44,16 @@ link rather than newly verified reporting.
 ## Capabilities and Constraints
 
 - Include how Julia's business started.
-- Include her journey into politics.
+- Include her journey into politics. The full approved first-person account lives
+  at `/my-journey-into-politics/`, linked from a shorter homepage teaser. My story
+  presents the political journey before the business story.
 - The brief permits lorem ipsum placeholders for those stories until copy is
   supplied or researched and confirmed.
 - Produce a static site suitable for static hosting.
-- Full priority statements are not supplied; the homepage explicitly marks
-  them as forthcoming. The four subjects match the saved selected Playbook
-  design, without inventing detailed policy commitments.
+- The four Playbook subjects now use concise paraphrases researched from Julia’s
+  public Facebook statements and direct reporting at the user’s request.
+  `PLAYBOOK_SOURCES.md` records sources and limits; each accordion links to its
+  supporting source. Preserve these limits when expanding the copy.
 - Campaign timing, election dates, contact email, and any forms or integrations
   remain undecided. Supplied social links are used directly.
 
@@ -67,10 +70,22 @@ link rather than newly verified reporting.
 - `AGENTS.md`: supplied campaign brief, requested story sections, source links,
   and static Astro hosting constraint.
 - `README.md`: project name and a short description identifying Julia.
-- No photographs, logos, finished biography, testimonials, endorsements, or
-  campaign event data are committed to the repository. Linked sources may
-  contain useful material, but their contents and asset rights have not been
-  verified. Do not turn placeholders or unreviewed sources into factual claims.
+- Julia's feedback, relayed by the user on 2026-10-04, approves her account of
+  being denied miscarriage care during litigation of Georgia's six-week ban
+  as her main reason for entering politics. It also supplies her two years of
+  party rebuilding, voting-access and get-out-the-vote results (including a
+  3.5% increase in primary voting, not percentage points), Spooky Voting and
+  Knock Your Block, public endorsements from every Ground Game organizer,
+  Gen Z identity, and vision for the next generation of local party leadership.
+  These are candidate-supplied claims; do not add dates, organizer names,
+  institutional endorsements, or details about the fifth seat or rewrite
+  that the feedback does not establish.
+- User-supplied photography and biography copy appear on the homepage and
+  political story page; the Warnock discussion photograph belongs to the latter;
+  `IMAGE_INDEX.md` records image review and provenance. Julia's relayed
+  feedback supplies the endorsement claim above. Linked sources may contain
+  additional material, but do not turn placeholders or unreviewed sources
+  into factual claims.
 
 ## Product Principles
 

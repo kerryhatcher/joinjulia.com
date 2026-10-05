@@ -54,7 +54,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** Four people stand in front of a large blue mural depicting Martin Luther King Jr. The leftmost person wears a pink hat and high-visibility vest and holds a long-handled tool.
 
-**Site use and crop:** Useful community image. Confirm whether this was a cleanup or another event before describing an activity; retain all four people and enough mural to explain the setting.
+**Site use and crop:** Selected for the contact introduction (2026-10-04), with the complete square composition and observed-scene alt text. Useful community image. Confirm whether this was a cleanup or another event before describing an activity; retain all four people and enough mural to explain the setting.
 
 **Draft alt text:** Four people standing in front of a blue portrait mural.
 
@@ -202,7 +202,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** People sit around a reflective conference table in an office with a Georgia state seal on the wall. A woman on the right in a black sleeveless top gestures while others listen. Large white bands are baked into the top and bottom of the file.
 
-**Site use and crop:** Selected for the homepage politics story (2026-10-04); CSS uses a 3:2 crop with vertical object position 37.5% to remove embedded white bands. Astro generates responsive WebP derivatives. Strong landscape story image after cropping the white bands. Keep the gesturing participant on the right and the surrounding listeners. Confirm participants, meeting purpose, and location.
+**Site use and crop:** Moved from the homepage politics story to the dedicated My journey into politics page at the user's request (2026-10-04); CSS uses a 3:2 crop with vertical object position 37.5% to remove embedded white bands. Astro generates responsive WebP derivatives. Strong landscape story image after cropping the white bands. Keep the gesturing participant on the right and the surrounding listeners. Confirm participants, meeting purpose, and location.
 
 **Draft alt text:** A woman gestures during a discussion with Sen. Raphael Warnock, seated at left beneath the Georgia state seal.
 
@@ -238,7 +238,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** A woman in a black sleeveless top and orange lanyard rests her chin on her hand while looking to the right. The close vertical composition includes a table edge and a partially visible flag behind her.
 
-**Site use and crop:** Strong candid supporting portrait. Preserve her gaze direction and some space to the right. Appears related to the conference-table image, but that relationship is unverified.
+**Site use and crop:** Selected for the first chapter of the politics journey in live review; no reuse elsewhere on the site. Strong candid supporting portrait. Preserve her gaze direction and some space to the right. Appears related to the conference-table image, but that relationship is unverified.
 
 **Draft alt text:** Woman resting her chin on her hand during a meeting.
 
@@ -364,7 +364,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** A woman in a white blouse and dark pinstriped skirt shakes hands with a man in a navy suit. They face one another against a blue wall, wood paneling, and flags.
 
-**Site use and crop:** Strong interaction image once context is confirmed. Keep both people and their joined hands. Appears related to the group portrait, but do not infer the man’s identity, an endorsement, or an official role.
+**Site use and crop:** Selected for the third chapter of the politics journey in live review with observed-scene caption and alt text, without identity or endorsement claims. Strong interaction image once context is confirmed. Keep both people and their joined hands. Appears related to the group portrait, but do not infer the man’s identity, an endorsement, or an official role.
 
 **Draft alt text:** Woman and man shaking hands in a room with flags.
 
@@ -382,7 +382,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** The user-designated headshot of Julia: a smiling upper-body portrait with long red hair and blonde front highlights, a black blazer, and a tan V-neck top against a plain dark gray background.
 
-**Site use and crop:** Selected for the homepage hero (2026-10-04); Astro generates responsive WebP derivatives. First choice for the site’s main portrait, introduction, and avatar. Square source supports square or modest portrait crops. Keep hair and shoulders; it has little spare room for a wide banner or overlaid text.
+**Site use and crop:** Selected for the homepage My story introduction (2026-10-04); Astro generates responsive WebP derivatives. First choice for the site’s main portrait, introduction, and avatar. Square source supports square or modest portrait crops. Keep hair and shoulders; it has little spare room for a wide banner or overlaid text.
 
 **Draft alt text:** Julia Adele Callahan smiling in a black blazer against a dark background.
 
@@ -400,7 +400,7 @@ Records 1–19 contain **working extended cutlines**, with present-tense action 
 
 **Description:** Football-play diagram with circles, crosses, advancing arrows, and vertical field lines in bright blue, cyan, yellow, and lime. The inspection tool displayed large blocky color fills and streaks; subsequent homepage browser inspection rendered clean lime routes and blue field lines over the blue surface. The inspection-tool appearance should not be treated as proof of file corruption.
 
-**Site use and crop:** Existing decorative asset, not a photo of Julia. Verified in the homepage browser on 2026-10-04: clean routes render correctly. Retained as a subdued decorative layer behind the headshot. Decorative use should have empty alt text.
+**Site use and crop:** Existing decorative asset, not a photo of Julia. Verified in the homepage browser on 2026-10-04: clean routes render correctly. Displayed unobstructed at full opacity in the hero. Decorative use should have empty alt text.
 
 **Draft alt text:** `alt=""` when decorative.
 

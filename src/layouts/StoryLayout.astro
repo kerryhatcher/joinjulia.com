@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import '@fontsource/barlow/latin-400.css';
+import '@fontsource/barlow/latin-600.css';
+import '@fontsource/barlow/latin-700.css';
+import Arrow from '../components/Arrow.astro';
+
+interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const homeUrl = new URL(base, Astro.site);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const socialImage = new URL(`${base}images/social-card.png`, Astro.site);
+const socialAlt = 'Julia Adele Callahan. Democrats on offense. For Bibb County Democratic Party Chair in Macon, Georgia.';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl.href}#webpage`,
+  url: canonicalUrl.href,
+  name: title,
+  description,
+  inLanguage: 'en-US',
+  isPartOf: { '@id': `${homeUrl.href}#website` },
+  about: { '@id': `${homeUrl.href}#julia` },
+};
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#103ca6" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Join Julia" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl.href} />
+    <meta property="og:image" content={socialImage.href} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={socialAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage.href} />
+    <meta name="twitter:image:alt" content={socialAlt} />
+    <link rel="canonical" href={canonicalUrl.href} />
+    <link rel="sitemap" href={new URL(`${base}sitemap-index.xml`, Astro.site).href} />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="preload" href={`${base}fonts/julia-playbook.otf`} as="font" type="font/otf" crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData).replace(/</g, '\\u003c')} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href={base} aria-label="Join Julia home">joinjulia.com</a>
+      <nav aria-label="Main navigation"><a href={`${base}#my-story`}>My story</a><a href={`${base}#priorities`}>Priorities</a></nav>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer section-shell">
+      <div><a class="wordmark" href={base}>joinjulia.com</a><p>Julia Adele Callahan<br />For Bibb County Democratic Party Chair<br />Macon, Georgia</p></div>
+      <nav aria-label="Contact and social links"><a href={`${base}#contact`}>Contact Julia <Arrow /></a><a href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Facebook <Arrow /></a><a href="https://www.instagram.com/jaythaqueen/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://www.threads.com/@jaythaqueen" target="_blank" rel="noopener noreferrer">Threads <Arrow /></a></nav>
+      <a class="back-top" href={`${base}#my-story`}>Back to My story <Arrow /></a>
+    </footer>
+  </body>
+</html>

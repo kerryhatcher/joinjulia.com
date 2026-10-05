@@ -6,8 +6,8 @@ import '@fontsource/barlow/latin-700.css';
 import { Image } from 'astro:assets';
 import headshot from '../../public/images/headshot.jpg';
 import speaking from '../../public/images/475563222_18483407191023500_1833185274346487540_n.jpg';
-import meeting from '../../public/images/526597981_18518407303023500_453408748168898313_n.jpg';
 import businessPhoto from '../../public/images/dream-clean-group.jpg';
+import playbookGraphic from '../../public/images/offensive-playbook.webp';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
 
@@ -46,10 +46,34 @@ const structuredData = {
 };
 
 const priorities = [
-  { title: 'Jail & public safety reform', id: 'public-safety' },
-  { title: 'Election accessibility', id: 'elections' },
-  { title: 'Healthcare', id: 'healthcare' },
-  { title: 'Education', id: 'education' },
+  {
+    "title": "Jail & public safety reform",
+    "id": "public-safety",
+    "copy": "Our justice system should be rooted in accountability. I’m calling for quarterly public updates on county justice programs, objective numbers that show what is working, and a fully budgeted plan for a new jail facility. Community members deserve a place at the decision-making table.",
+    "source": "https://wgxa.tv/news/local/we-cant-just-sit-here-and-wait-bibb-dems-push-for-jail-transparency-after-deaths",
+    "sourceLabel": "Read the jail transparency reporting"
+  },
+  {
+    "title": "Election accessibility",
+    "id": "elections",
+    "copy": "Every eligible voter deserves a voice. I’ve opposed voter registration challenges that disproportionately affect students, people of color, and people without stable housing. I’ve also worked to expand early voting and rebuild our get-out-the-vote infrastructure, with programs like Spooky Voting and Knock Your Block. Protecting the vote and turning out our neighbors go hand in hand.",
+    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid0k2ryEf5AL7gvzGbBSn4dCaKgSXKefoRhJh2vA6z7dp99k4UhGmGe1nkNm38BttvDl",
+    "sourceLabel": "Read my voting access post"
+  },
+  {
+    "title": "Healthcare",
+    "id": "healthcare",
+    "copy": "Families deserve accurate information and trustworthy reproductive care. Being denied miscarriage care brought me into politics and led me to cofound Middle Georgia 4 Choice. I’ve spoken out about barriers to care and the maternal health crisis in Macon-Bibb, especially for Black women. Mothers and babies deserve better.",
+    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid035GzJ2hZgqZzenWTXjLm5Uq934s4wz4KXANKjjC3kKR2gpzqqjHBftNkXfSgWULxLl",
+    "sourceLabel": "Read my maternal health post"
+  },
+  {
+    "title": "Education",
+    "id": "education",
+    "copy": "Children deserve a safe, inclusive environment to learn and grow. I’ve called for an end to the harassment and mistreatment of transgender children, and spoken against legislation that targets children and families because they don’t fit the traditional gender binary. Protecting young people means taking bullying seriously and respecting who they are.",
+    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid02hv7HVdrKQmUZBMFoG4km2nt6G8DJBZs8saj931fSpqCqj8uUh4mHapmTigUwYPPyl",
+    "sourceLabel": "Read my post on protecting children"
+  }
 ];
 const reading = [
   { publication: 'Ms. Magazine', title: 'Julia’s writing on reproductive rights', href: 'https://msmagazine.com/author/jcallahan/' },
@@ -99,32 +123,49 @@ const reading = [
           <div class="hero-copy">
             <h1 id="campaign-heading"><span>Democrats</span><span>on offense</span><span class="candidate-name">Julia Adele Callahan</span></h1>
             <p class="candidate-office">For Bibb County Democratic Party Chair</p>
-            <a class="primary-action" href="#priorities">Explore the priorities <Arrow /></a>
+            <a class="primary-action" href="#my-story">Read Julia’s story <Arrow /></a>
           </div>
           <div class="hero-media">
-            <img class="play-diagram" src={`${base}images/offensive-playbook.webp`} width="1469" height="1071" alt="" decoding="async" />
-            <Image class="hero-portrait" src={headshot} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 80px), (max-width: 1100px) 36vw, 440px" width={960} height={960} format="webp" quality={85} alt="Julia Adele Callahan smiling in a black blazer against a dark background." loading="eager" fetchpriority="high" />
+            <Image class="play-diagram" src={playbookGraphic} widths={[360, 540, 720, 1080, 1469]} sizes="(max-width: 560px) calc(100vw - 40px), (max-width: 760px) 520px, (min-width: 1680px) 712px, 43vw" width={1469} height={1071} format="webp" quality={85} alt="" decoding="async" loading="eager" />
           </div>
         </div>
       </section>
       <section class="playbook section-shell" id="priorities" aria-labelledby="playbook-heading">
         <div class="section-heading"><h2 id="playbook-heading">The playbook</h2><span class="heading-rule" aria-hidden="true"></span></div>
+        <p class="playbook-intro">Accountable local government. A voice for every voter. Care families can trust. A safe place for every child to learn.</p>
         <div class="priority-list">
           {priorities.map((priority, index) => (
             <details class="priority" name="playbook" id={priority.id}>
               <summary><span class="play-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span class="priority-title">{priority.title}</span><Arrow /></summary>
-              <div class="priority-content"><p>Julia’s full priority statement is coming soon. Follow along as the campaign playbook takes shape.</p><a class="text-link" href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Follow Julia on Facebook <Arrow /></a></div>
+              <div class="priority-content"><p>{priority.copy}</p><a class="text-link" href={priority.source} target="_blank" rel="noopener noreferrer">{priority.sourceLabel} <Arrow /></a></div>
             </details>
           ))}
         </div>
       </section>
       <section class="stories" id="my-story" aria-labelledby="story-heading">
-        <div class="story-index section-shell">
-          <h2 id="story-heading">My story</h2>
-          <a href="#business-story">How my business started <Arrow /></a>
-          <a href="#politics-story">My journey into politics <Arrow /></a>
-        </div>
+          <div class="story-index section-shell">
+            <Image class="story-portrait" src={headshot} widths={[260, 360, 520, 720]} sizes="(max-width: 760px) 96px, 160px" width={720} height={720} format="webp" quality={85} alt="Julia Adele Callahan smiling in a black blazer against a dark background." loading="lazy" />
+            <div class="story-navigation">
+              <h2 id="story-heading">My story</h2>
+              <a href="#politics-story">My journey into politics <Arrow /></a>
+              <a href="#business-story">How my business started <Arrow /></a>
+            </div>
+          </div>
         <div class="story-passages section-shell">
+          <article class="story-passage" id="politics-story" aria-labelledby="politics-heading">
+            <div class="story-visual">
+              <h3 id="politics-heading">My journey into politics</h3>
+              <figure class="speaking-photo">
+                <Image src={speaking} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} height={900} format="webp" alt="A woman speaks at a microphone, with two women behind her and a blue reproductive-freedom backdrop." loading="lazy" />
+                <figcaption>Speaking at a lectern marked “Fighting for Reproductive Freedom.”</figcaption>
+              </figure>
+            </div>
+            <div class="story-copy">
+              <p>I got into politics after being denied miscarriage care while Georgia’s six-week abortion ban was being litigated. I cofounded Middle Georgia 4 Choice, then spent the last two years helping rebuild our local Democratic Party.</p>
+              <p>Now I’m ready for the next generation to lead—and to put Democrats on offense.</p>
+              <a class="text-link" href={`${base}my-journey-into-politics/`}>Read my journey into politics <Arrow /></a>
+            </div>
+          </article>
           <article class="story-passage" id="business-story" aria-labelledby="business-heading">
             <div class="story-visual">
               <h3 id="business-heading">How my business started</h3>
@@ -138,24 +179,6 @@ const reading = [
               <p>After his death, I had to care for my sibling and my young children. Between childcare and my family’s other needs, a traditional job wasn’t possible. I started Dream Clean Housekeeping Company in June 2023 to earn a living with the flexibility my family needed.</p>
               <p>That experience is why supporting mothers, families, mental health, and small businesses matters so much to me. I know what it means to balance caring for the people you love with making a living. My business grew out of those responsibilities, and they continue to shape what I stand for.</p>
               <a class="text-link" href="https://www.dreamcleanmacon.com/" target="_blank" rel="noopener noreferrer">Visit Dream Clean <Arrow /></a>
-            </div>
-          </article>
-          <article class="story-passage" id="politics-story" aria-labelledby="politics-heading">
-            <div class="story-visual">
-              <h3 id="politics-heading">My journey into politics</h3>
-              <figure class="speaking-photo">
-                <Image src={speaking} widths={[360, 540, 720, 960]} sizes="(max-width: 760px) calc(100vw - 40px), 36vw" width={720} height={900} format="webp" alt="A woman speaks at a microphone, with two women behind her and a blue reproductive-freedom backdrop." loading="lazy" />
-                <figcaption>Speaking at a lectern marked “Fighting for Reproductive Freedom.”</figcaption>
-              </figure>
-            </div>
-            <div class="story-copy">
-              <p>When I was pregnant, I visited a center in Macon offering free ultrasounds. I thought I was getting medical care. Instead, staff told me something was wrong with my baby’s kidneys, information my OB-GYN later confirmed was incorrect. What I had walked into was a crisis pregnancy center, or “fake clinic.” I left frightened about a problem that wasn’t there.</p>
-              <p>That experience pushed me into political action. I began speaking out about fake clinics and the barriers families face when seeking reproductive health care. As a cofounder of Middle Georgia 4 Choice, I’ve shared my story publicly, including at Georgia’s State Capitol. Families deserve accurate information, trustworthy care, and leaders who listen when something goes wrong.</p>
-              <a class="text-link" href="https://msmagazine.com/author/jcallahan/" target="_blank" rel="noopener noreferrer">Read Julia’s writing <Arrow /></a>
-              <figure class="meeting-photo">
-                <Image src={meeting} widths={[480, 720, 1000, 1290]} sizes="(max-width: 760px) calc(100vw - 40px), 48vw" width={1290} height={1720} format="webp" alt="A woman gestures during a discussion with Sen. Raphael Warnock, seated at left beneath the Georgia state seal." loading="lazy" />
-                <figcaption>A discussion with Sen. Raphael Warnock.</figcaption>
-              </figure>
             </div>
           </article>
         </div>
@@ -172,7 +195,7 @@ const reading = [
       <section class="campaign-close" aria-labelledby="close-heading">
         <div class="close-layout section-shell">
           <h2 id="close-heading">It’s time to<br />make things happen.</h2>
-          <div class="close-copy"><p>It’s time for a change. Let’s put Democrats on offense, right here in Bibb County.</p><a class="primary-action" href="#contact">Connect with Julia <Arrow /></a></div>
+          <div class="close-copy"><p>It’s time for the next generation to lead. Let’s put Democrats on offense, right here in Bibb County.</p><a class="primary-action" href="#contact">Connect with Julia <Arrow /></a></div>
         </div>
       </section>
       <ContactForm />
@@ -182,5 +205,5 @@ const reading = [
       <nav aria-label="Contact and social links"><a href="#contact">Contact Julia <Arrow /></a><a href="https://www.facebook.com/JuliaAdeleCallahan/" target="_blank" rel="noopener noreferrer">Facebook <Arrow /></a><a href="https://www.instagram.com/jaythaqueen/" target="_blank" rel="noopener noreferrer">Instagram <Arrow /></a><a href="https://www.threads.com/@jaythaqueen" target="_blank" rel="noopener noreferrer">Threads <Arrow /></a></nav>
       <a class="back-top" href="#main">Back to the playbook <Arrow /></a>
     </footer>
-  </body>
+</body>
 </html>
