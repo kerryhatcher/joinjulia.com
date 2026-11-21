@@ -1,0 +1,47 @@
+---
+import StoryLayout from '../../layouts/StoryLayout.astro';
+import Arrow from '../../components/Arrow.astro';
+import { playbookSections, type PlaybookSection } from '../../data/playbook';
+
+export function getStaticPaths() {
+  return playbookSections.map((section) => ({ params: { slug: section.slug }, props: { section } }));
+}
+
+interface Props {
+  section: PlaybookSection;
+}
+const { section } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const others = playbookSections.filter((other) => other.slug !== section.slug);
+const title = `${section.title} | Julia Adele Callahan`;
+---
+<StoryLayout title={title} description={section.summary}>
+  <article class="play-page" aria-labelledby="play-heading">
+    <header class="play-header">
+      <div class="section-shell play-header-inner">
+        <span class="play-page-number" aria-hidden="true">{section.number}</span>
+        <h1 id="play-heading">{section.title}</h1>
+      </div>
+    </header>
+    <div class="section-shell play-body">
+      <ol class="play-items">
+        {section.items.map((item, index) => (
+          <li>
+            <span class="play-letter" aria-hidden="true">{String.fromCharCode(97 + index)}</span>
+            <p>{item}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </article>
+  <nav class="play-pages section-shell" aria-label="Playbook sections">
+    {others.map((other) => (
+      <a href={`${base}playbook/${other.slug}/`}>
+        <span class="play-next-number">{other.number}</span>
+        <span class="play-next-title">{other.title}</span>
+        <Arrow />
+      </a>
+    ))}
+    <a class="back-top" href={`${base}#priorities`}>Back to the playbook <Arrow /></a>
+  </nav>
+</StoryLayout>

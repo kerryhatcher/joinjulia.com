@@ -10,6 +10,7 @@ import businessPhoto from '../../public/images/dream-clean-group.jpg';
 import playbookGraphic from '../../public/images/offensive-playbook.webp';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
+import { playbookSections } from '../data/playbook';
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const canonicalUrl = new URL(base, Astro.site);
@@ -45,36 +46,6 @@ const structuredData = {
   ],
 };
 
-const priorities = [
-  {
-    "title": "Jail & public safety reform",
-    "id": "public-safety",
-    "copy": "Our justice system should be rooted in accountability. I’m calling for quarterly public updates on county justice programs, objective numbers that show what is working, and a fully budgeted plan for a new jail facility. Community members deserve a place at the decision-making table.",
-    "source": "https://wgxa.tv/news/local/we-cant-just-sit-here-and-wait-bibb-dems-push-for-jail-transparency-after-deaths",
-    "sourceLabel": "Read the jail transparency reporting"
-  },
-  {
-    "title": "Election accessibility",
-    "id": "elections",
-    "copy": "Every eligible voter deserves a voice. I’ve opposed voter registration challenges that disproportionately affect students, people of color, and people without stable housing. I’ve also worked to expand early voting and rebuild our get-out-the-vote infrastructure, with programs like Spooky Voting and Knock Your Block. Protecting the vote and turning out our neighbors go hand in hand.",
-    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid0k2ryEf5AL7gvzGbBSn4dCaKgSXKefoRhJh2vA6z7dp99k4UhGmGe1nkNm38BttvDl",
-    "sourceLabel": "Read my voting access post"
-  },
-  {
-    "title": "Healthcare",
-    "id": "healthcare",
-    "copy": "Families deserve accurate information and trustworthy reproductive care. Being denied miscarriage care brought me into politics and led me to cofound Middle Georgia 4 Choice. I’ve spoken out about barriers to care and the maternal health crisis in Macon-Bibb, especially for Black women. Mothers and babies deserve better.",
-    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid035GzJ2hZgqZzenWTXjLm5Uq934s4wz4KXANKjjC3kKR2gpzqqjHBftNkXfSgWULxLl",
-    "sourceLabel": "Read my maternal health post"
-  },
-  {
-    "title": "Education",
-    "id": "education",
-    "copy": "Children deserve a safe, inclusive environment to learn and grow. I’ve called for an end to the harassment and mistreatment of transgender children, and spoken against legislation that targets children and families because they don’t fit the traditional gender binary. Protecting young people means taking bullying seriously and respecting who they are.",
-    "source": "https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid02hv7HVdrKQmUZBMFoG4km2nt6G8DJBZs8saj931fSpqCqj8uUh4mHapmTigUwYPPyl",
-    "sourceLabel": "Read my post on protecting children"
-  }
-];
 const reading = [
   { publication: 'Ms. Magazine', title: 'Julia’s writing on reproductive rights', href: 'https://msmagazine.com/author/jcallahan/' },
   { publication: 'Georgia Recorder', title: 'More from Julia’s perspective', href: 'https://georgiarecorder.com/author/juliacallhan/' },
@@ -132,13 +103,14 @@ const reading = [
       </section>
       <section class="playbook section-shell" id="priorities" aria-labelledby="playbook-heading">
         <div class="section-heading"><h2 id="playbook-heading">The playbook</h2><span class="heading-rule" aria-hidden="true"></span></div>
-        <p class="playbook-intro">Accountable local government. A voice for every voter. Care families can trust. A safe place for every child to learn.</p>
+        <p class="playbook-intro">It’s time for a change. Time to make things happen.</p>
         <div class="priority-list">
-          {priorities.map((priority, index) => (
-            <details class="priority" name="playbook" id={priority.id}>
-              <summary><span class="play-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span class="priority-title">{priority.title}</span><Arrow /></summary>
-              <div class="priority-content"><p>{priority.copy}</p><a class="text-link" href={priority.source} target="_blank" rel="noopener noreferrer">{priority.sourceLabel} <Arrow /></a></div>
-            </details>
+          {playbookSections.map((section) => (
+            <a class="play-row" href={`${base}playbook/${section.slug}/`}>
+              <span class="play-number" aria-hidden="true">{section.number}</span>
+              <span class="play-text"><span class="priority-title">{section.title}</span><span class="play-summary">{section.summary}</span></span>
+              <Arrow />
+            </a>
           ))}
         </div>
       </section>

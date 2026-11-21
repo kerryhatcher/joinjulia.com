@@ -1,37 +1,24 @@
 # Playbook source notes
 
-Reviewed in Chrome on 2026-10-04 at the user’s request. Copy is an editorial paraphrase of Julia’s own statements and previously supplied campaign facts, not a verbatim platform statement. No election dates, new endorsements, or new policy mechanisms have been added.
+The playbook copy comes from Julia’s playbook document (`/home/kwhatcher/Downloads/edit.pdf`, supplied by the user on 2026-11-19). It supersedes the earlier pasted text. The homepage shows the three sections as rows, and each section has its own page under `/playbook/`. Wording is lightly edited for the web: arrow notes become sentences, and "I am" becomes "I’m".
 
-## Jail & public safety reform
+No external sources are cited. No election dates, endorsements, policy mechanisms, or statistics have been added beyond her document.
 
-Our justice system should be rooted in accountability. I’m calling for quarterly public updates on county justice programs, objective numbers that show what is working, and a fully budgeted plan for a new jail facility. Community members deserve a place at the decision-making table.
+## Sections
 
-Source: [Read the jail transparency reporting](https://wgxa.tv/news/local/we-cant-just-sit-here-and-wait-bibb-dems-push-for-jail-transparency-after-deaths)
+1. Demanding transparency (`/playbook/demanding-transparency/`): items a–c.
+2. Walking the walk of a bold progressive policy agenda (`/playbook/policy-agenda/`): items a–f.
+3. Building on our recent successes and adding infrastructure (`/playbook/infrastructure/`): items a–h.
 
-## Election accessibility
+Abbreviations are expanded at first use on each page, using the names the user supplied: Board of Elections (BOE), Macon Water Authority (MWA), Democratic Party of Georgia (DPG), and Other Local Option Sales Tax (OLOST). GOTV and WCAG are kept as she wrote them.
 
-Every eligible voter deserves a voice. I’ve opposed voter registration challenges that disproportionately affect students, people of color, and people without stable housing. I’ve also worked to expand early voting and rebuild our get-out-the-vote infrastructure, with programs like Spooky Voting and Knock Your Block. Protecting the vote and turning out our neighbors go hand in hand.
+## Differences from the earlier pasted text
 
-Source: [Read my voting access post](https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid0k2ryEf5AL7gvzGbBSn4dCaKgSXKefoRhJh2vA6z7dp99k4UhGmGe1nkNm38BttvDl)
+- The PDF does not include "Lestercrats" or "self-enriching leaders." Its wording is "The days of people sitting in positions to enrich themselves or their friends are over."
+- The PDF's "Expanding voting access" item is now "Expand voting access," with the sentence split.
 
-## Healthcare
+## Items to confirm with Julia before publishing
 
-Families deserve accurate information and trustworthy reproductive care. Being denied miscarriage care brought me into politics and led me to cofound Middle Georgia 4 Choice. I’ve spoken out about barriers to care and the maternal health crisis in Macon-Bibb, especially for Black women. Mothers and babies deserve better.
-
-Source: [Read my maternal health post](https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid035GzJ2hZgqZzenWTXjLm5Uq934s4wz4KXANKjjC3kKR2gpzqqjHBftNkXfSgWULxLl)
-
-## Education
-
-Children deserve a safe, inclusive environment to learn and grow. I’ve called for an end to the harassment and mistreatment of transgender children, and spoken against legislation that targets children and families because they don’t fit the traditional gender binary. Protecting young people means taking bullying seriously and respecting who they are.
-
-Source: [Read my post on protecting children](https://www.facebook.com/JuliaAdeleCallahan/posts/pfbid02hv7HVdrKQmUZBMFoG4km2nt6G8DJBZs8saj931fSpqCqj8uUh4mHapmTigUwYPPyl)
-
-## Evidence and scope
-
-- Jail: WGXA’s February 4, 2026 report attributes the transparency requests to Julia and Renoalda Scott, including quarterly updates, objective program data, and a budgeted new-facility plan. Do not attribute Scott’s separate probation/bond remarks to Julia.
-- Elections: Julia’s public post opposes registration challenges. Early voting and named organizing programs come from Julia’s feedback supplied by the user in this session. Historical hearing dates and registration totals are omitted.
-- Healthcare: Julia’s public post raises maternal and infant health concerns, particularly for Black women. The miscarriage-care account and Middle Georgia 4 Choice background come from the approved story. Numerical mortality claims were not independently verified and are omitted.
-- Education: Julia’s public post on Nex Benedict explicitly calls for a safe, inclusive environment and an end to harassment of transgender children. This does not establish school funding, curriculum, transportation, or teacher-pay proposals.
-- Facebook search also returned shared and tagged posts by other people. Those were excluded as evidence of Julia’s own commitments. Private comments and personal family details were not used.
-
-Facebook displayed relative dates; exact post dates are not asserted here.
+- Section 1 names "Chair Scott." That is her wording, and it stays unless she says otherwise.
+- Section 3 item h says "a Black candidate." This is her stated goal, not a candidacy announcement.
+- The homepage intro line "It’s time for a change. Time to make things happen." comes from the campaign brief in AGENTS.md, not her document. Replace it if she supplies approved wording.
