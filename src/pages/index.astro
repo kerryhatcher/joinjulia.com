@@ -10,6 +10,7 @@ import businessPhoto from '../../public/images/dream-clean-group.jpg';
 import playbookGraphic from '../../public/images/offensive-playbook.webp';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
+import { playbookSections } from '../data/playbook';
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
 const canonicalUrl = new URL(base, Astro.site);
@@ -45,66 +46,6 @@ const structuredData = {
   ],
 };
 
-const priorities = [
-  {
-    title: 'Demanding transparency',
-    id: 'transparency',
-    paragraphs: [
-      'To demand transparency from our public officials, we must hold transparency as a radical value for ourselves. That means involving the community proactively on issues, and forming and publishing clear processes for how the committee makes key decisions on endorsements and policies.',
-      'I’m grateful to stand on the shoulders of leaders who have been doing this work for a long time. When Chair Scott and I ran two years ago, we did so on shared values of honesty, transparency, and accountability, and we did foundational infrastructure work together: reactivating and reorganizing the committee, rewriting our local bylaws, and restarting subcommittees. Our visions for this party are now vastly different. The days of self-enriching leaders and Lestercrats are over.',
-      'We should live-stream our meetings on a dedicated content-sharing platform for all members. We should have a dedicated, reliable internet connection so the committee can run Zoom meetings consistently, with the link shared openly. And we should keep archives and records publicly available on our website where appropriate, so the community knows how we reached our conclusions and how our post seat holders voted.',
-    ],
-  },
-  {
-    title: 'Walking the walk of a bold progressive policy agenda',
-    id: 'policy-agenda',
-    paragraphs: [
-      'No data centers in our community. No AI use in our committee.',
-      'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG). Our voters must not be taken for granted: their voices should be heard, and policies, programs, and investments should meet the needs of Middle Georgians.',
-      'Taxes should be progressive, not regressive. We should campaign against the Other Local Option Sales Tax (OLOST), because property owners can afford this tax more than everyday consumers.',
-    ],
-  },
-  {
-    title: 'Being aggressively inclusive',
-    id: 'inclusion',
-    paragraphs: [
-      'Reports and websites from the Board of Elections (BOE), Macon Water Authority (MWA), and this committee should all be ADA (WCAG) compliant.',
-      'We should bring food, childcare, and music to every meeting to bring working families in, and address the barriers to every person’s participation in the committee.',
-    ],
-  },
-  {
-    title: 'Engaging every race and hearing every community',
-    id: 'every-race',
-    paragraphs: [
-      'We should engage in all partisan and non-partisan races. That means lobbying the DPG to change bylaws to make this easier, and developing a process within our committee to ensure voters always have a progressive option and are educated on who that is in nonpartisan races.',
-      'We should hear and prioritize our community’s changing values through 2-on-1 meetings that build lasting institutional relationships, relationships that outlast any single person.',
-    ],
-  },
-  {
-    title: 'Expanding voting access',
-    id: 'voting-access',
-    paragraphs: [
-      'Sustain the network we built through GOTV, and channel that energy into long-term engagement by continuing the Knock Your Block program where the Coordinated Campaign is absent.',
-      'We’ve gotten four early voting locations, but we should have five. We should also add a second Sunday of early voting, and keep diversifying the BOE to represent our community.',
-    ],
-  },
-  {
-    title: 'Building infrastructure and funding',
-    id: 'infrastructure',
-    paragraphs: [
-      'Build on our recent successes, and add more infrastructure improvements. Clarify our internal processes so we can operate within the bylaws and focus our effort on issues of substance instead of internal disagreements. Expand our subcommittee infrastructure to create and share accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials.',
-      'Create a fundraising infrastructure that can sustain the committee and fund mutual aid events with community organizations and offices. Clean out our storage unit, find a long-term office space that our fundraising can financially sustain, and update our Google listing to match, with a phone number staffed by the executive board to hear from constituents.',
-      'Hold a post seat holder retreat in the first quarter of 2027 to set policy priorities and build a two-year operating strategic plan adapted from the National Democratic Training Committee.',
-    ],
-  },
-  {
-    title: 'Winning the mayorship and building the bench',
-    id: 'bench-2028',
-    paragraphs: [
-      'Win the mayorship in 2028 with a Black candidate who embodies our bold progressive policy agenda, and build the bench for every position.',
-    ],
-  },
-];
 const reading = [
   { publication: 'Ms. Magazine', title: 'Julia’s writing on reproductive rights', href: 'https://msmagazine.com/author/jcallahan/' },
   { publication: 'Georgia Recorder', title: 'More from Julia’s perspective', href: 'https://georgiarecorder.com/author/juliacallhan/' },
@@ -164,11 +105,12 @@ const reading = [
         <div class="section-heading"><h2 id="playbook-heading">The playbook</h2><span class="heading-rule" aria-hidden="true"></span></div>
         <p class="playbook-intro">It’s time for a change. Time to make things happen.</p>
         <div class="priority-list">
-          {priorities.map((priority, index) => (
-            <details class="priority" name="playbook" id={priority.id}>
-              <summary><span class="play-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span class="priority-title">{priority.title}</span><Arrow /></summary>
-              <div class="priority-content">{priority.paragraphs.map((text) => <p>{text}</p>)}</div>
-            </details>
+          {playbookSections.map((section) => (
+            <a class="play-row" href={`${base}playbook/${section.slug}/`}>
+              <span class="play-number" aria-hidden="true">{section.number}</span>
+              <span class="play-text"><span class="priority-title">{section.title}</span><span class="play-summary">{section.summary}</span></span>
+              <Arrow />
+            </a>
           ))}
         </div>
       </section>

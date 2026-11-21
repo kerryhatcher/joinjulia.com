@@ -1,22 +1,24 @@
 # Playbook source notes
 
-The homepage playbook copy comes from Julia’s own playbook document, supplied by the user on 2026-11-19. The text is lightly edited for web reading: arrow notes are converted to sentences, and her headings are grouped into seven plays. The abbreviations BOE, MWA, DPG, and OLOST are expanded at first use, using the names she supplied: Board of Elections, Macon Water Authority, Democratic Party of Georgia, and Other Local Option Sales Tax. GOTV and WCAG are kept as she wrote them. Proper names are kept as she wrote them.
+The playbook copy comes from Julia’s playbook document (`/home/kwhatcher/Downloads/edit.pdf`, supplied by the user on 2026-11-19). It supersedes the earlier pasted text. The homepage shows the three sections as rows, and each section has its own page under `/playbook/`. Wording is lightly edited for the web: arrow notes become sentences, and "I am" becomes "I’m".
 
-No external sources are cited for these plays. No election dates, endorsements, policy mechanisms, or statistics have been added beyond her document.
+No external sources are cited. No election dates, endorsements, policy mechanisms, or statistics have been added beyond her document.
 
-## Plays and where the copy came from
+## Sections
 
-1. Demanding transparency: her "Demanding Transparency" section.
-2. Walking the walk of a bold progressive policy agenda: her policy agenda bullets.
-3. Being aggressively inclusive: her inclusion bullet.
-4. Engaging every race and hearing every community: her nonpartisan-race bullet and 2-on-1 meeting bullet.
-5. Expanding voting access: her GOTV and early-voting bullets.
-6. Building infrastructure and funding: her infrastructure, fundraising, office, retreat, and subcommittee bullets.
-7. Winning the mayorship and building the bench: her 2028 mayoral bullet.
+1. Demanding transparency (`/playbook/demanding-transparency/`): items a–c.
+2. Walking the walk of a bold progressive policy agenda (`/playbook/policy-agenda/`): items a–f.
+3. Building on our recent successes and adding infrastructure (`/playbook/infrastructure/`): items a–h.
+
+Abbreviations are expanded at first use on each page, using the names the user supplied: Board of Elections (BOE), Macon Water Authority (MWA), Democratic Party of Georgia (DPG), and Other Local Option Sales Tax (OLOST). GOTV and WCAG are kept as she wrote them.
+
+## Differences from the earlier pasted text
+
+- The PDF does not include "Lestercrats" or "self-enriching leaders." Its wording is "The days of people sitting in positions to enrich themselves or their friends are over."
+- The PDF's "Expanding voting access" item is now "Expand voting access," with the sentence split.
 
 ## Items to confirm with Julia before publishing
 
-- Play 1 names "Chair Scott" and includes "self-enriching leaders" and "Lestercrats." These are accusations about named or identifiable people, so she should confirm the wording and that she is comfortable publishing it.
-- "Lestercrats" is a term from her document. Its meaning for readers should be confirmed.
-- Play 7 says "a Black candidate." This is her wording and is a stated goal, not a candidacy announcement.
-- Her intro line was not in the document. The homepage uses "It’s time for a change. Time to make things happen.", taken from the campaign brief in AGENTS.md. Replace it if she supplies approved wording.
+- Section 1 names "Chair Scott." That is her wording, and it stays unless she says otherwise.
+- Section 3 item h says "a Black candidate." This is her stated goal, not a candidacy announcement.
+- The homepage intro line "It’s time for a change. Time to make things happen." comes from the campaign brief in AGENTS.md, not her document. Replace it if she supplies approved wording.
