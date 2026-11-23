@@ -22,22 +22,8 @@ export const playbookSections: PlaybookSection[] = [
     ],
   },
   {
-    slug: 'policy-agenda',
-    number: '02',
-    title: 'Walking the walk of a bold progressive policy agenda',
-    summary: 'No data centers in our community. No AI use in our committee.',
-    items: [
-      'No data centers in our community. No AI use in our committee.',
-      'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
-      'Being aggressively inclusive. Reports and websites of the Board of Elections (BOE), the Macon Water Authority (MWA), and this committee all need to be ADA (WCAG) compliant. We should bring food, childcare, and music to every meeting to bring working families in, and address the barriers to every person participating in the committee.',
-      'Taxes should be progressive, not regressive. We should campaign against the Other Local Option Sales Tax (OLOST), because property owners can afford this tax more than everyday consumers.',
-      'Engaging in all partisan and non-partisan races. We should lobby the DPG to change bylaws to make this easier, and develop a process within our committee to ensure voters always have a progressive option and are educated on who that is in nonpartisan races.',
-      'Hearing and prioritizing our community’s changing values. We should hold 2-on-1 meetings to build lasting institutional relationships that will outlast a single person.',
-    ],
-  },
-  {
     slug: 'infrastructure',
-    number: '03',
+    number: '02',
     title: 'Building on our recent successes and adding infrastructure',
     summary: 'Sustain the network we built through GOTV, and channel that energy into long-term engagement.',
     items: [
@@ -48,7 +34,20 @@ export const playbookSections: PlaybookSection[] = [
       'Clean out our storage unit and find a long-term office space that a fundraising infrastructure will financially sustain. Then update our Google listing to reflect it, with a phone number staffed by the executive board to hear from constituents.',
       'Clarify our internal processes so that we can operate within the bylaws and focus more of our effort on the issues of substance instead of internal disagreements.',
       'Expand our subcommittee infrastructure to create and disseminate accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials.',
-      'Win the mayorship in 2028 with a Black candidate who embodies our Bold Progressive Policy Agenda, and build the bench for every position.',
+    ],
+  },
+  {
+    slug: 'policy-agenda',
+    number: '03',
+    title: 'Walking the walk of a bold progressive policy agenda',
+    summary: 'No data centers in our community. No AI use in our committee.',
+    items: [
+      'No data centers in our community. No AI use in our committee.',
+      'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
+      'Being aggressively inclusive. Reports and websites of the Board of Elections (BOE), the Macon Water Authority (MWA), and this committee all need to be ADA (WCAG) compliant. We should bring food, childcare, and music to every meeting to bring working families in, and address the barriers to every person participating in the committee.',
+      'Taxes should be progressive, not regressive. We should campaign against the Other Local Option Sales Tax (OLOST), because property owners can afford this tax more than everyday consumers.',
+      'Engaging in all partisan and non-partisan races. We should lobby the DPG to change bylaws to make this easier, and develop a process within our committee to ensure voters always have a progressive option and are educated on who that is in nonpartisan races.',
+      'Hearing and prioritizing our community’s changing values. We should hold 2-on-1 meetings to build lasting institutional relationships that will outlast a single person.',
     ],
   },
 ];

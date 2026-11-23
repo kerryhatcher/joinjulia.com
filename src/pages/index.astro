@@ -103,7 +103,10 @@ const reading = [
       </section>
       <section class="playbook section-shell" id="priorities" aria-labelledby="playbook-heading">
         <div class="section-heading"><h2 id="playbook-heading">The playbook</h2><span class="heading-rule" aria-hidden="true"></span></div>
-        <p class="playbook-intro">It’s time for a change. Time to make things happen.</p>
+        <div class="playbook-goal">
+          <h3>Win the mayorship in 2028</h3>
+          <p>Elect a candidate who embodies our Bold Progressive Policy Agenda, and build the bench for every position.</p>
+        </div>
         <div class="priority-list">
           {playbookSections.map((section) => (
             <a class="play-row" href={`${base}playbook/${section.slug}/`}>
