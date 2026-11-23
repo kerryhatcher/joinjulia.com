@@ -33,7 +33,7 @@ export const playbookSections: PlaybookSection[] = [
       'Create a fundraising infrastructure that can not only sustain the committee, but also support mutual aid events with community organizations.',
       'Clean out our storage unit and find a long-term office space that a fundraising infrastructure will financially sustain. Then update our Google listing to reflect it, with a phone number staffed by the executive board to hear from constituents.',
       'Clarify our internal processes so that we can operate within the bylaws and focus more of our effort on the issues of substance instead of internal disagreements.',
-      'Improve our subcommittee infrastructure to create and disseminate accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials. Our policy and legislative subcommittee will monitor government agencies and quasi-governmental organizations and plan an advocacy day at the Georgia State Capitol.',
+      'Improve our subcommittee infrastructure to create and disseminate accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials. Our policy and legislative subcommittee will monitor government agencies and quasi-governmental organizations. We’ll teach members how to advocate and give them opportunities to practice at multiple advocacy days, both locally and at the Georgia State Capitol.',
     ],
   },
   {
@@ -43,9 +43,9 @@ export const playbookSections: PlaybookSection[] = [
     summary: 'Stand behind our neighbors’ priorities, build political influence heading into 2028, and hold candidates and elected officials accountable to our community.',
     items: [
       'We should limit the committee’s use of AI and invest in local talent.',
-      'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
-      'Being aggressively inclusive. Reports and websites of the Board of Elections (BOE), the Macon Water Authority (MWA), and this committee all need to be ADA (WCAG) compliant. We’ll provide food, childcare, and music at every meeting to welcome working families, and we’ll address other barriers that keep people from participating.',
-      'Taxes should be progressive, not regressive. We’ll campaign against the Other Local Option Sales Tax (OLOST), because property owners can afford this tax more than everyday consumers.',
+      'Make Middle Georgia a priority for the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
+      'Being aggressively inclusive. Reports and websites of the Board of Elections (BOE), the Macon Water Authority (MWA), all other public entities, and this committee all need to be ADA (WCAG) compliant. We’ll provide food, childcare, and music at every meeting to welcome working families, and we’ll challenge ourselves to address the barriers that keep anyone from participating in the committee.',
+      'Taxes should be progressive, not regressive. We’ll campaign against the Other Local Option Sales Tax (OLOST), because property owners and corporations can afford this tax more than everyday consumers. We’ll advocate for removing the tax on food and oppose corporate tax breaks.',
       'Engaging in all partisan and non-partisan races. We’ll lobby the Democratic Party of Georgia to change its bylaws so our committee can take part in these races more easily. In nonpartisan races, we’ll develop a process to ensure voters always have a progressive option and know which candidate that is.',
       'Hearing and prioritizing our community’s changing values. We’ll hold 2-on-1 meetings to build relationships between organizations that last beyond any one person’s involvement.',
     ],
