@@ -40,9 +40,9 @@ export const playbookSections: PlaybookSection[] = [
     slug: 'policy-agenda',
     number: '03',
     title: 'Walking the Walk of a Bold Progressive Policy Agenda',
-    summary: 'Put Middle Georgia’s priorities into action by widening participation, advocating for progressive policies, and organizing in partisan and nonpartisan races.',
+    summary: 'Stand behind our neighbors’ priorities, build political influence heading into 2028, and hold candidates and elected officials accountable to our community.',
     items: [
-      'No data centers in our community. No AI use in our committee.',
+      'Our neighbors should be able to trust what we publish. If we use AI, someone on the committee must check the work, stand behind it, and correct mistakes. I support rules that protect workers’ jobs and pay and keep tech companies responsible for their data centers’ power and water costs.',
       'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
       'Being aggressively inclusive. Reports and websites of the Board of Elections (BOE), the Macon Water Authority (MWA), and this committee all need to be ADA (WCAG) compliant. We should bring food, childcare, and music to every meeting to bring working families in, and address the barriers to every person participating in the committee.',
       'Taxes should be progressive, not regressive. We should campaign against the Other Local Option Sales Tax (OLOST), because property owners can afford this tax more than everyday consumers.',

@@ -326,6 +326,7 @@ h3 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 3vw, 
   height: auto;
   color: var(--blue);
 }
+.play-items p + p { margin-top: 1em; }
 .play-items p { font-size: 20px; line-height: 1.7; max-width: 65ch; }
 .play-pages { display: grid; border-top: 1px solid var(--navy); padding-bottom: 64px; }
 .play-pages a { display: grid; grid-template-columns: 62px minmax(0, 1fr) 28px; align-items: center; gap: 24px; min-height: 73px; border-bottom: 1px solid var(--border-soft); text-decoration: none; font-size: 22px; font-weight: 600; line-height: 1.3; }

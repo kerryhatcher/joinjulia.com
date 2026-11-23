@@ -32,7 +32,9 @@ const title = `${section.title} | Julia Adele Callahan`;
               <path fill="none" stroke="currentColor" stroke-width="3" d="M30 8H4v36h33l5-5V24" />
               <path fill="currentColor" d="m11 25 5-5 8 8L42 5l5 4-22 29z" />
             </svg>
-            <p>{item}</p>
+            <div>
+              {item.split('\n\n').map((paragraph) => <p>{paragraph}</p>)}
+            </div>
           </li>
         ))}
       </ul>
