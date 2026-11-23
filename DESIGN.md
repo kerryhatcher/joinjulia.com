@@ -251,11 +251,8 @@ Keyboard focus uses a 3px outline with a 5px offset, blue on light surfaces and 
 
 The compact white header pairs a bold Barlow domain wordmark with two sentence-case links. Links underline on hover; wordmarks, navigation, footer links, and inline reading links have a 44px minimum touch height at every breakpoint. Footer social links follow the same type family and inline-arrow language. A focus-revealed skip link precedes navigation.
 
-### Numbered priority disclosures
-
-Native `details` and `summary` form an exclusive group named `playbook`. Large blue two-digit numbers, navy issue titles, vertical number rules, and a right arrow create the repeated signature. The open arrow rotates 90 degrees; hover changes the title to blue. The expanded reading panel aligns with the title column and works without client JavaScript.
-
-The section states upfront that full priority statements are forthcoming. The hero action points to Julia’s story while priority statements remain unfinished. These are current content states, not permanent design rules.
+### Numbered play rows
+The homepage lists the three playbook sections as ruled row links. Each row has a large blue two-digit number with a vertical rule, a navy section title, a one-sentence summary, and a right arrow. Hover changes the title to blue and advances the arrow. Each row opens its own page at `/playbook/<slug>/`, built from `src/data/playbook.ts` through one dynamic route. The section pages use a blue header band with the number and title, then checklist items separated by rules, then links to the other sections.
 
 ### Story strips and passages
 
@@ -280,7 +277,7 @@ Publication labels, larger article descriptions, and inline arrows form ruled ex
 - **Do** keep angular uppercase display type paired with Barlow prose and controls.
 - **Do** maintain navy-on-light and white-on-blue reading contrast, with visible focus in the appropriate accent.
 - **Do** use continuous ruled rows and responsive reading order for related content.
-- **Do** preserve native disclosure semantics, real link destinations, and reduced-motion behavior.
+- **Do** preserve real link destinations and reduced-motion behavior.
 - **Do** retain font attribution, licensing, modification source, and generated-asset provenance.
 
 ### Don't:

@@ -50,10 +50,9 @@ link rather than newly verified reporting.
 - The brief permits lorem ipsum placeholders for those stories until copy is
   supplied or researched and confirmed.
 - Produce a static site suitable for static hosting.
-- The four Playbook subjects now use concise paraphrases researched from Julia’s
-  public Facebook statements and direct reporting at the user’s request.
-  `PLAYBOOK_SOURCES.md` records sources and limits; each accordion links to its
-  supporting source. Preserve these limits when expanding the copy.
+- The three Playbook sections use the wording of Julia’s playbook document
+  (`edit.pdf`, supplied by the user). Each section has its own page under
+  `/playbook/`. `PLAYBOOK_SOURCES.md` records the source and its limits.
 - Campaign timing, election dates, contact email, and any forms or integrations
   remain undecided. Supplied social links are used directly.
 

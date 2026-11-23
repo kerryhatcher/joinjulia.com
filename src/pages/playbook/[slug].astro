@@ -1,0 +1,53 @@
+---
+import StoryLayout from '../../layouts/StoryLayout.astro';
+import Arrow from '../../components/Arrow.astro';
+import { playbookSections, type PlaybookSection } from '../../data/playbook';
+
+export function getStaticPaths() {
+  return playbookSections.map((section) => ({ params: { slug: section.slug }, props: { section } }));
+}
+
+interface Props {
+  section: PlaybookSection;
+}
+const { section } = Astro.props;
+const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
+const others = playbookSections.filter((other) => other.slug !== section.slug);
+const title = `${section.title} | Julia Adele Callahan`;
+---
+<StoryLayout title={title} description={section.summary}>
+  <article class="play-page" aria-labelledby="play-heading">
+    <header class="play-header">
+      <div class="section-shell play-header-inner">
+        <span class="play-page-number" aria-hidden="true">{section.number}</span>
+        <h1 id="play-heading">{section.title}</h1>
+      </div>
+    </header>
+    <div class="section-shell play-body">
+      <ul class="play-items" role="list">
+        {section.items.map((item) => (
+          <li>
+            <svg class="play-checkbox" width="48" height="48" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <path fill="var(--lime)" d="M4 8h30l8 8v23l-5 5H4z" />
+              <path fill="none" stroke="currentColor" stroke-width="3" d="M30 8H4v36h33l5-5V24" />
+              <path fill="currentColor" d="m11 25 5-5 8 8L42 5l5 4-22 29z" />
+            </svg>
+            <div>
+              {item.split('\n\n').map((paragraph) => <p>{paragraph}</p>)}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </article>
+  <nav class="play-pages section-shell" aria-label="Playbook sections">
+    {others.map((other) => (
+      <a href={`${base}playbook/${other.slug}/`}>
+        <span class="play-next-number">{other.number}</span>
+        <span class="play-next-title">{other.title}</span>
+        <Arrow />
+      </a>
+    ))}
+    <a class="back-top" href={`${base}#priorities`}>Back to the playbook <Arrow /></a>
+  </nav>
+</StoryLayout>
