@@ -252,7 +252,7 @@ Keyboard focus uses a 3px outline with a 5px offset, blue on light surfaces and 
 The compact white header pairs a bold Barlow domain wordmark with two sentence-case links. Links underline on hover; wordmarks, navigation, footer links, and inline reading links have a 44px minimum touch height at every breakpoint. Footer social links follow the same type family and inline-arrow language. A focus-revealed skip link precedes navigation.
 
 ### Numbered play rows
-The homepage lists the three playbook sections as ruled row links. Each row has a large blue two-digit number with a vertical rule, a navy section title, a one-sentence summary, and a right arrow. Hover changes the title to blue and advances the arrow. Each row opens its own page at `/playbook/<slug>/`, built from `src/data/playbook.ts` through one dynamic route. The section pages use a blue header band with the number and title, then lettered items separated by rules, then links to the other sections.
+The homepage lists the three playbook sections as ruled row links. Each row has a large blue two-digit number with a vertical rule, a navy section title, a one-sentence summary, and a right arrow. Hover changes the title to blue and advances the arrow. Each row opens its own page at `/playbook/<slug>/`, built from `src/data/playbook.ts` through one dynamic route. The section pages use a blue header band with the number and title, then checklist items separated by rules, then links to the other sections.
 
 ### Story strips and passages
 
