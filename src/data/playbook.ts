@@ -13,7 +13,7 @@ export const playbookSections: PlaybookSection[] = [
   {
     slug: 'demanding-transparency',
     number: '01',
-    title: 'Demanding transparency',
+    title: 'Demanding Transparency',
     summary: 'In order to demand transparency from our public officials, we must hold transparency as a radical value for ourselves.',
     items: [
       'In order to demand transparency from our public officials, we must hold transparency as a radical value for ourselves. This means involving the community proactively on issues, and forming and publishing clear processes on how the committee made key decisions on endorsements or policies.',
@@ -24,7 +24,7 @@ export const playbookSections: PlaybookSection[] = [
   {
     slug: 'infrastructure',
     number: '02',
-    title: 'Building on our recent successes and adding infrastructure',
+    title: 'Building on Our Recent Successes and Adding Infrastructure',
     summary: 'Sustain the network we built through GOTV, and channel that energy into long-term engagement.',
     items: [
       'Sustain the network we built through GOTV, and channel that energy into long-term engagement by continuing the Knock Your Block program where the Coordinated Campaign is absent.',
@@ -39,7 +39,7 @@ export const playbookSections: PlaybookSection[] = [
   {
     slug: 'policy-agenda',
     number: '03',
-    title: 'Walking the walk of a bold progressive policy agenda',
+    title: 'Walking the Walk of a Bold Progressive Policy Agenda',
     summary: 'No data centers in our community. No AI use in our committee.',
     items: [
       'No data centers in our community. No AI use in our committee.',

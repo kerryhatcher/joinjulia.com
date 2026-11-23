@@ -6,9 +6,9 @@ No external sources are cited. No election dates, endorsements, policy mechanism
 
 ## Sections
 
-1. Demanding transparency (`/playbook/demanding-transparency/`): items a–c.
-2. Building on our recent successes and adding infrastructure (`/playbook/infrastructure/`): items a–g.
-3. Walking the walk of a bold progressive policy agenda (`/playbook/policy-agenda/`): items a–f.
+1. Demanding Transparency (`/playbook/demanding-transparency/`): items a–c.
+2. Building on Our Recent Successes and Adding Infrastructure (`/playbook/infrastructure/`): items a–g.
+3. Walking the Walk of a Bold Progressive Policy Agenda (`/playbook/policy-agenda/`): items a–f.
 
 Abbreviations are expanded at first use on each page, using the names the user supplied: Board of Elections (BOE), Macon Water Authority (MWA), Democratic Party of Georgia (DPG), and Other Local Option Sales Tax (OLOST). GOTV and WCAG are kept as she wrote them.
 
@@ -16,7 +16,7 @@ Abbreviations are expanded at first use on each page, using the names the user s
 
 - The PDF does not include "Lestercrats" or "self-enriching leaders." Its wording is "The days of people sitting in positions to enrich themselves or their friends are over."
 - The PDF's "Expanding voting access" item is now "Expand voting access," with the sentence split.
-- The user supplied revised wording for the 2028 mayorship goal. It introduces the three sections on the homepage and includes building the bench for every position.
+- The user supplied revised wording for the 2028 mayorship goal. It introduces the three sections on the homepage and includes building the bench for every elected position.
 
 ## Items to confirm with Julia before publishing
 
