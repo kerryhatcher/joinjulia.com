@@ -25,7 +25,7 @@ export const playbookSections: PlaybookSection[] = [
     slug: 'infrastructure',
     number: '02',
     title: 'Building on Our Recent Successes and Adding Infrastructure',
-    summary: 'Sustain the network we built through GOTV, and channel that energy into long-term engagement.',
+    summary: 'Keep our voter outreach going, expand access to the ballot, and strengthen how the committee plans, raises funds, and serves the community.',
     items: [
       'Sustain the network we built through GOTV, and channel that energy into long-term engagement by continuing the Knock Your Block program where the Coordinated Campaign is absent.',
       'Expand voting access. We’ve gotten four early voting locations, but we should have five. We should add a second Sunday of early voting, and continue diversifying the Board of Elections (BOE) to represent our community.',
@@ -40,7 +40,7 @@ export const playbookSections: PlaybookSection[] = [
     slug: 'policy-agenda',
     number: '03',
     title: 'Walking the Walk of a Bold Progressive Policy Agenda',
-    summary: 'No data centers in our community. No AI use in our committee.',
+    summary: 'Put Middle Georgia’s priorities into action by widening participation, advocating for progressive policies, and organizing in partisan and nonpartisan races.',
     items: [
       'No data centers in our community. No AI use in our committee.',
       'Secure a place for Middle Georgia in the Democratic Party of Georgia (DPG), and ensure that our voters are not taken for granted: their voices are heard, and policies, programs, and investments meet the needs of Middle Georgians.',
