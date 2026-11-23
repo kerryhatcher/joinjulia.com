@@ -33,7 +33,7 @@ export const playbookSections: PlaybookSection[] = [
       'Create a fundraising infrastructure that can not only sustain the committee, but also support mutual aid events with community organizations.',
       'Clean out our storage unit and find a long-term office space that a fundraising infrastructure will financially sustain. Then update our Google listing to reflect it, with a phone number staffed by the executive board to hear from constituents.',
       'Clarify our internal processes so that we can operate within the bylaws and focus more of our effort on the issues of substance instead of internal disagreements.',
-      'Improve our subcommittee infrastructure to create and disseminate accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials.',
+      'Improve our subcommittee infrastructure to create and disseminate accurate, relevant information, so we can more effectively exercise our political influence when meeting with elected officials. Our policy and legislative subcommittee will monitor government agencies and quasi-governmental organizations and plan an advocacy day at the Georgia State Capitol.',
     ],
   },
   {
