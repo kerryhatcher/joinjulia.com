@@ -1,0 +1,93 @@
+---
+import '@fontsource/barlow/latin-400.css';
+import '@fontsource/barlow/latin-600.css';
+import '@fontsource/barlow/latin-700.css';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  const showMockup = import.meta.env.DEV || process.env.GITHUB_EVENT_NAME === 'pull_request';
+  return showMockup ? [{ params: { concept: 'two-year-playbook' } }] : [];
+}
+
+const base = import.meta.env.BASE_URL;
+const seasons = [
+  { year: '2027', plays: [
+    ['February', 'State committee meeting', 'Gather questions from Bibb County members before the meeting.'],
+    ['February', 'Macon Day at the Capitol', 'Agree on the local concerns to raise and who will report back.'],
+    ['February–March', 'Post seat holder retreat', 'Ask post seat holders what support they need ahead of the retreat.'],
+    ['March 16', 'OLOST', 'Identify the questions members want answered before March 16.'],
+    ['March', 'Board of Elections', 'Review the agenda and decide who will attend.'],
+    ['Summer', 'Candidate recruitment and retreat', 'Start conversations with prospective candidates before the retreat.'],
+    ['Date open', 'Fundraiser', 'Set a goal and choose a date before inviting supporters.'],
+  ]},
+  { year: '2028', plays: [
+    ['May · provisional', 'Partisan primaries and local nonpartisan elections', 'Prepare a voter guide covering the local, state and federal primaries and the local nonpartisan races on the same day.'],
+    ['November', 'General election', 'Confirm the fall ballot and schedule volunteer outreach before early voting begins.'],
+  ]},
+];
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>The Two-Year Playbook | Julia Adele Callahan · Draft</title>
+</head>
+<body>
+  <a class="skip-link" href="#timeline">Skip to timeline</a>
+  <header><div class="wrap mast"><a class="wordmark" href={base}>joinjulia.com</a><span>Democrats on offense</span></div></header>
+  <main>
+    <section class="cover"><div class="wrap cover-inner">
+      <div><p class="label">Julia Adele Callahan &nbsp; / &nbsp; 2027–2028</p>
+        <h1>The two-year<br/>playbook</h1>
+        <p class="intro">Playing offense means knowing the playbook before the snap. We need a full two-year plan so we’re all running the same play, every down.</p>
+      </div>
+      <img src={base + 'images/offensive-playbook.webp'} alt="" />
+    </div></section>
+    <div class="draft"><div class="wrap"><strong>Working draft</strong> &nbsp; Sample dates and preparation ideas for discussion.</div></div>
+    <div class="wrap sheet" id="timeline">
+      <nav aria-label="Jump to year"><p class="label">Jump to year</p><a href="#year-2027">2027 ↓</a><a href="#year-2028">2028 ↓</a></nav>
+      <div>{seasons.map(({year, plays}) => <section class="season" id={'year-' + year}>
+        <h2>{year}</h2>
+        <ol>{plays.map(([when, title, prep]) => <li><p class="when">{when}</p><div><h3>{title}</h3><p class="prep"><strong>Prepare</strong> {prep}</p></div></li>)}</ol>
+      </section>)}</div>
+    </div>
+  </main>
+</body>
+</html>
+<style>
+  .wrap { width:min(1180px, calc(100% - 2 * var(--gutter))); margin-inline:auto }
+  .mast { display:flex; align-items:center; justify-content:space-between; min-height:60px; gap:12px }
+  .mast span,.label,.when,.draft strong { font-size:.83rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase }
+  .cover { background:var(--blue); color:white; overflow:hidden }
+  .cover-inner { display:grid; grid-template-columns:1.25fr 1fr; align-items:center; gap:5%; padding-block:clamp(38px,5vw,75px) }
+  .cover .label { color:var(--lime) }
+  h1 { margin:18px 0; font-size:clamp(66px,7.8vw,118px); line-height:.95 }
+  .intro { max-width:46ch; font-size:clamp(18px,1.6vw,23px); line-height:1.4 }
+  .cover img { width:100%; display:block }
+  .draft { padding:12px 0; background:var(--lime); font-size:16px }
+  .sheet { padding-block:48px; display:grid; grid-template-columns:1fr 4fr; gap:5% }
+  nav { align-self:start; position:sticky; top:24px }
+  nav a { display:block; width:fit-content; padding:5px 0; color:var(--blue); font-size:22px; font-weight:700 }
+  h2 { font:normal clamp(44px,5vw,72px)/1 var(--display); color:var(--blue); padding-bottom:12px; border-bottom:3px solid }
+  ol { list-style:none; padding:0 0 0 16px; margin:0 }
+  li { position:relative; border-left:2px solid var(--blue); padding:22px 0 22px 25px; display:grid; grid-template-columns:145px 1fr; gap:12px }
+  li::before { content:''; position:absolute; top:29px; left:-8px; width:10px; height:10px; border:2px solid var(--blue); background:white; border-radius:50% }
+  li + li { border-top:1px solid var(--border-soft) }
+  .when { color:var(--blue); padding-top:4px }
+  h3 { font-size:clamp(22px,2vw,30px); line-height:1.2 }
+  .prep { margin-top:7px; line-height:1.45 }
+  .prep strong { color:var(--blue); margin-right:.35em }
+  .season + .season { margin-top:44px }
+  @media(max-width:700px) {
+    .mast span { font-size:.66rem }
+    .cover-inner { grid-template-columns:1fr; position:relative }
+    .cover img { position:absolute; width:32%; right:0; top:35px; opacity:.45 }
+    .cover-inner > div { position:relative; z-index:1 }
+    .sheet { display:block; padding-top:20px }
+    nav { position:static; display:flex; align-items:center; gap:16px; margin-bottom:24px }
+    li { grid-template-columns:1fr; gap:5px; padding:16px 0 18px 18px }
+    li::before { top:24px }
+    .intro { margin-top:22px }
+  }
+</style>
