@@ -4,12 +4,14 @@ import '@fontsource/barlow/latin-400.css';
 import '@fontsource/barlow/latin-600.css';
 import '@fontsource/barlow/latin-700.css';
 import { Image } from 'astro:assets';
-import headshot from '../../public/images/headshot.jpg';
 import speaking from '../../public/images/475563222_18483407191023500_1833185274346487540_n.jpg';
 import businessPhoto from '../../public/images/dream-clean-group.jpg';
 import playbookGraphic from '../../public/images/offensive-playbook.webp';
 import Arrow from '../components/Arrow.astro';
 import ContactForm from '../components/ContactForm.astro';
+import StoryIndex from '../components/StoryIndex.astro';
+import BeyondTheSidelines from '../components/BeyondTheSidelines.astro';
+import CampaignClose from '../components/CampaignClose.astro';
 import { playbookSections } from '../data/playbook';
 
 const base = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/`;
@@ -46,15 +48,6 @@ const structuredData = {
   ],
 };
 
-const reading = [
-  { publication: 'The Macon Newsroom', title: 'Georgia is the last state to take the hassle out of food benefits for millions of women and children', href: 'https://macon-newsroom.com/14378/food/georgia-is-the-last-state-to-take-the-hassle-out-of-food-benefits-for-millions-of-women-and-children/' },
-  { publication: '13WMAZ', title: '“My baby is still gone”: Macon rally highlights Gabriella Dixon, other unsolved cases', href: 'https://www.13wmaz.com/article/news/local/macon-rally-highlights-gabriella-dixon-unsolved-cases/93-14cc60cc-f9b6-4c58-a04f-a3bdd3a6c124' },
-  { publication: 'Houston Home Journal', title: 'Citizens gather to demand town hall meeting from Rep. Austin Scott', href: 'https://hhjonline.com/citizens-gather-to-demand-town-hall-meeting-from-rep-austin-scott/' },
-  { publication: 'WGXA', title: '“We can’t just sit here and wait”: Bibb Dems push for jail transparency after deaths', href: 'https://wgxa.tv/news/local/we-cant-just-sit-here-and-wait-bibb-dems-push-for-jail-transparency-after-deaths' },
-  { publication: 'Ms. Magazine', title: 'Without Roe v. Wade, women in my shoes could be jailed for their miscarriage', href: 'https://msmagazine.com/2022/11/03/miscarriage-abortion-roe-v-wade-women/' },
-  { publication: 'Georgia Recorder', title: 'Extending the child tax credit will help families cope with life’s emergencies', href: 'https://georgiarecorder.com/2021/09/13/opinion-extending-the-child-tax-credit-will-help-families-cope-with-lifes-emergencies/' },
-  { publication: 'Center for American Progress Action', title: 'Without the child tax credit, some Georgia parents must leave the workforce to care for their children', href: 'https://www.americanprogressaction.org/article/without-child-tax-credit-some-georgia-parents-must-leave-workforce-to-care-for-their-children/' },
-];
 ---
 <!doctype html>
 <html lang="en">
@@ -122,14 +115,7 @@ const reading = [
         </div>
       </section>
       <section class="stories" id="my-story" aria-labelledby="story-heading">
-          <div class="story-index section-shell">
-            <Image class="story-portrait" src={headshot} widths={[260, 360, 520, 720]} sizes="(max-width: 760px) 96px, 160px" width={720} height={720} format="webp" quality={85} alt="Julia Adele Callahan smiling in a black blazer against a dark background." loading="lazy" />
-            <div class="story-navigation">
-              <h2 id="story-heading">My story</h2>
-              <a href="#politics-story">My journey into politics <Arrow /></a>
-              <a href="#business-story">How my business started <Arrow /></a>
-            </div>
-          </div>
+          <StoryIndex />
         <div class="story-passages section-shell">
           <article class="story-passage" id="politics-story" aria-labelledby="politics-heading">
             <div class="story-visual">
@@ -162,21 +148,8 @@ const reading = [
           </article>
         </div>
       </section>
-      <section class="reading section-shell" aria-labelledby="reading-heading">
-        <div class="section-heading"><h2 id="reading-heading">Beyond the sidelines</h2><span class="heading-rule" aria-hidden="true"></span></div>
-        <p class="reading-intro">Julia’s writing and stories from the community. Get to know the person behind the campaign.</p>
-        <div class="reading-list">
-          {reading.map(item => (
-            <a class="reading-item" href={item.href} target="_blank" rel="noopener noreferrer"><span class="publication">{item.publication}</span><span class="reading-title">{item.title}</span><Arrow /></a>
-          ))}
-        </div>
-      </section>
-      <section class="campaign-close" aria-labelledby="close-heading">
-        <div class="close-layout section-shell">
-          <h2 id="close-heading">It’s time to<br />make things happen.</h2>
-          <div class="close-copy"><p>It’s time for the next generation to lead. Let’s put Democrats on offense, right here in Bibb County.</p><a class="primary-action" href="#contact">Connect with Julia <Arrow /></a></div>
-        </div>
-      </section>
+      <BeyondTheSidelines />
+      <CampaignClose />
       <ContactForm />
     </main>
     <footer class="site-footer section-shell">

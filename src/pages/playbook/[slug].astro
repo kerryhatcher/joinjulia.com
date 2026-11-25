@@ -1,6 +1,10 @@
 ---
 import StoryLayout from '../../layouts/StoryLayout.astro';
 import Arrow from '../../components/Arrow.astro';
+import StoryIndex from '../../components/StoryIndex.astro';
+import BeyondTheSidelines from '../../components/BeyondTheSidelines.astro';
+import CampaignClose from '../../components/CampaignClose.astro';
+import ContactForm from '../../components/ContactForm.astro';
 import { playbookSections, type PlaybookSection } from '../../data/playbook';
 
 export function getStaticPaths() {
@@ -50,4 +54,10 @@ const title = `${section.title} | Julia Adele Callahan`;
     ))}
     <a class="back-top" href={`${base}#priorities`}>Back to the playbook <Arrow /></a>
   </nav>
+  <section class="stories" aria-labelledby="story-heading">
+    <StoryIndex linkBase={base} />
+  </section>
+  <BeyondTheSidelines />
+  <CampaignClose />
+  <ContactForm />
 </StoryLayout>

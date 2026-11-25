@@ -1,0 +1,19 @@
+---
+import { Image } from 'astro:assets';
+import Arrow from './Arrow.astro';
+import headshot from '../../public/images/headshot.jpg';
+
+interface Props {
+  /** Prefix for the story anchors: '' on the homepage, the site base elsewhere. */
+  linkBase?: string;
+}
+const { linkBase = '' } = Astro.props;
+---
+<div class="story-index section-shell">
+  <Image class="story-portrait" src={headshot} widths={[260, 360, 520, 720]} sizes="(max-width: 760px) 96px, 160px" width={720} height={720} format="webp" quality={85} alt="Julia Adele Callahan smiling in a black blazer against a dark background." loading="lazy" />
+  <div class="story-navigation">
+    <h2 id="story-heading">My story</h2>
+    <a href={`${linkBase}#politics-story`}>My journey into politics <Arrow /></a>
+    <a href={`${linkBase}#business-story`}>How my business started <Arrow /></a>
+  </div>
+</div>
