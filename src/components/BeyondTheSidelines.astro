@@ -1,0 +1,13 @@
+---
+import Arrow from './Arrow.astro';
+import { reading } from '../data/reading';
+---
+<section class="reading section-shell" aria-labelledby="reading-heading">
+  <div class="section-heading"><h2 id="reading-heading">Beyond the sidelines</h2><span class="heading-rule" aria-hidden="true"></span></div>
+  <p class="reading-intro">Julia’s writing and stories from the community. Get to know the person behind the campaign.</p>
+  <div class="reading-list">
+    {reading.map(item => (
+      <a class="reading-item" href={item.href} target="_blank" rel="noopener noreferrer"><span class="publication">{item.publication}</span><span class="reading-title">{item.title}</span><Arrow /></a>
+    ))}
+  </div>
+</section>
